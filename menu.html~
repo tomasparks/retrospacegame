@@ -2,8 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/courneuf-family" rel="stylesheet" type="text/css"/>
-<!-- look for another font -->
+<link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/courneuf-family" rel="stylesheet" type="text/css"/> 
 </head>
 
 <body style="
