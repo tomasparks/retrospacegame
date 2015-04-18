@@ -1,44 +1,49 @@
-THREE.QuadTreeSphere = function (workerPath, camera, radius, patchSize, scene, fov, quadMaterial) {
+THREE.QuadTreeSphere = function (options) {
 	
-    THREE.Geometry.call(this);
+    THREE.Object3D.call(this);
 	
-	this.type = 'QuadTreeSphere';
-
-	this.parameters = {
-		workerPath: workerPath,
-		camera: camera,
-		radius: radius,
-		patchSize: patchSize,
-		scene: scene,
-		fov: fov,
-		quadMaterial: quadMaterial 
-	};
-
     this.isInitialized = false;
     this.pause = false;
     this.meshes = {};
     this.meshBuildTimeAvg = 0;
-	this.workerPath = workerPath || "QuadTreeSphereWorker.js";
 	
-	//this.configureCamera(camera);
 
-    this.scene = scene;
-    this.radius = radius;
-    this.patchSize = patchSize;
-    this.fov = fov;
 	
-	this.quadMaterial = quadMaterial;
-this.camera = camera;
-this.cameraHeight = 0;
 	
-	initializeWorker();
+	this.initializeOptions(options);
+	
+	this.initializeWorker();
 	
 	this.updateCounter = 0;
 	this.avg = 0;
 	
 };
 
+THREE.QuadTreeSphere.prototype = Object.create(THREE.Object3D.prototype);
 
+
+
+THREE.QuadTreeSphere.prototype.initializeOptions = function (options, callback) {
+	
+	this.workerPath = options.workerPath || "QuadTreeSphereWorker.js";
+	
+	this.configureCamera(options.camera);
+
+    this.scene = options.scene;
+    this.radius = options.radius;
+    this.patchSize = options.patchSize;
+    this.fov = options.fov;
+	
+	this.quadMaterial = options.quadMaterial;
+	
+};
+
+THREE.QuadTreeSphere.prototype.configureCamera = function ( camera ) {
+	
+    this.camera = camera;
+    this.cameraHeight = 0;
+	
+};
 
 
 THREE.QuadTreeSphere.prototype.initializeWorker = function () {
@@ -59,6 +64,8 @@ THREE.QuadTreeSphere.prototype.initializeWorker = function () {
 
 THREE.QuadTreeSphere.prototype.update = function () {
 
+    return function () {
+
 		var localCameraPosition;
 		
         if (!this.isInitialized) {
@@ -78,7 +85,7 @@ THREE.QuadTreeSphere.prototype.update = function () {
 			}
 		});
     }
-
+}();
 
 
 
@@ -96,7 +103,7 @@ THREE.QuadTreeSphere.prototype.onWorkerMessage = function (event) {
 	
 	// Is this akin to an Error?
     if (data.log) {
-//        console.log(data.log);
+        console.log(data.log);
         return;
     }
 
@@ -122,11 +129,11 @@ THREE.QuadTreeSphere.prototype.onWorkerMessage = function (event) {
 		
         data.newMeshes.forEach(this.buildNewMesh.bind(this));
     }
-   
+    
      console.log(Date.now() - data.started);
      console.log(data.finished);
      console.log(data);
-     
+    
 };
 
 /**
@@ -136,27 +143,32 @@ THREE.QuadTreeSphere.prototype.removeMesh = function (name) {
 
     this.scene.remove(this.meshes[name]);
     delete this.meshes[name];
-   console.log("Deleting: " + name);
+    console.log("Deleting: " + name);
 
 };
 
 THREE.QuadTreeSphere.prototype.buildNewMesh = function (mesh) {
+console.log(mesh)
+
     var buff = new THREE.BufferGeometry();
 	
 	
-    buff.attributes.position = {};
-    buff.attributes.position.array = mesh.positions;
-    buff.attributes.position.itemSize = 3;
-    /*
-     buff.attributes.normal = {};
-     buff.attributes.normal.array = mesh.normals;
-     buff.attributes.normal.itemSize = 3;
-     */
-    buff.attributes.uv = {};
-    buff.attributes.uv.array = mesh.uvs;
-    buff.attributes.uv.itemSize = 2;
+  //  buff.attributes.position = {};
+  buff.addAttribute( 'position', new THREE.BufferAttribute( mesh.positions, 3 ) );
+    //buff.attributes.position.array = mesh.positions;
+    //buff.attributes.position.itemSize = 3;
+   
+     //buff.attributes.normal = {};
+  buff.addAttribute( 'normal', new THREE.BufferAttribute( mesh.normals, 3 ) );
+     //buff.attributes.normal.array = mesh.normals;
+     //buff.attributes.normal.itemSize = 3;
+     
+    //buff.attributes.uv = {};
+  //buff.addAttribute( 'normal', new THREE.BufferAttribute( mesh.normals, 3 ) );
+    //buff.attributes.uv.array = mesh.uvs;
+    //buff.attributes.uv.itemSize = 2;
 
-    buff.computeBoundingSphere();
+    //buff.computeBoundingSphere();
 	
 	
 	
@@ -183,5 +195,4 @@ THREE.QuadTreeSphere.prototype.buildNewMesh = function (mesh) {
 	delete mesh;
 }
 
-THREE.QuadTreeSphere.prototype = Object.create( THREE.Geometry.prototype );
-THREE.QuadTreeSphere.prototype.constructor = THREE.QuadTreeSphere;
+

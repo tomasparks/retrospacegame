@@ -19,10 +19,11 @@
 </head>
 
 <body>
-  <script src="scripts/three.min.js"></script>
+  <script src="scripts/three.js"></script>
   <script src="scripts/Logger.js"></script>
   <script src="scripts/FlyControls.js"></script>
   <script src="scripts/stats.js"></script>
+   <script src="scripts/QuadMaterialBuilder.js"></script>
   <script src="scripts/QuadTreeSphere.js"></script>
   <script src="scripts/Application.js"></script>
   
@@ -199,22 +200,22 @@
 					var decimalColor = ((width/1E11) * 16777215);
 			
 			
-				    var R =	 decimalColor%256;
-				    var G =	 (decimalColor/256)%256;
+				    var R =	 1//decimalColor%256;
+				    var G =	 1//(decimalColor/256)%256;
 				    var B =	 Math.sin(width);//((decimalColor/256)/256)%256;
 			
 				    color.r = R;
 				    color.g = G;
 				    color.b = B;
 			
-					return new THREE.MeshBasicMaterial({color: color});
+					return new THREE.MeshBasicMaterial({ color: color});
 				
 				}
 			
 			});
 
 		    this.quadSphere = new THREE.QuadTreeSphere({
-				workerPath: "scripts/QuadTreeSphereWorker.min.js",
+				workerPath: "scripts/QuadTreeSphereWorker.js",
 				camera: this.camera,
 				radius: this.quadSphereRadius,
 				patchSize: 16,
