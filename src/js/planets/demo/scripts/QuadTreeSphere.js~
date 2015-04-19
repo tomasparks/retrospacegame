@@ -148,7 +148,7 @@ THREE.QuadTreeSphere.prototype.removeMesh = function (name) {
 };
 
 THREE.QuadTreeSphere.prototype.buildNewMesh = function (mesh) {
-console.log(mesh)
+
 
     var buff = new THREE.BufferGeometry();
 	
@@ -164,12 +164,12 @@ console.log(mesh)
      //buff.attributes.normal.itemSize = 3;
      
     //buff.attributes.uv = {};
-  //buff.addAttribute( 'normal', new THREE.BufferAttribute( mesh.normals, 3 ) );
+  buff.addAttribute( 'uv', new THREE.BufferAttribute( mesh.uvs, 2 ) );
     //buff.attributes.uv.array = mesh.uvs;
     //buff.attributes.uv.itemSize = 2;
 
-    //buff.computeBoundingSphere();
-	
+    buff.computeBoundingSphere();
+    buff.computeVertexNormals();
 	
 	
 	

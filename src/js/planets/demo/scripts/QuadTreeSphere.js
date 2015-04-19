@@ -173,7 +173,6 @@ THREE.QuadTreeSphere.prototype.buildNewMesh = function (mesh) {
 	
 	
 	
-	
 	var newMesh = new THREE.Mesh(
 		buff, 
 		this.quadMaterial.buildMaterial(
