@@ -1,0 +1,18 @@
+[submodule "src/js/generic/three.js"]
+	path = src/js/generic/three.js
+	url = https://github.com/mrdoob/three.js.git
+[submodule "src/js/generic/Leaflet"]
+	path = src/js/generic/Leaflet
+	url = https://github.com/Leaflet/Leaflet.git
+[submodule "src/js/generic/x3dom"]
+	path = src/js/generic/x3dom
+	url = https://github.com/x3dom/x3dom.git
+[submodule "src/js/generic/dat.gui"]
+	path = src/js/generic/dat.gui
+	url = https://github.com/dataarts/dat.gui.git
+[submodule "src/js/generic/jquery"]
+	path = src/js/generic/jquery
+	url = https://github.com/jquery/jquery.git
+[submodule "src/js/generic/jszip"]
+	path = src/js/generic/jszip
+	url = https://github.com/Stuk/jszip.git

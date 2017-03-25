@@ -1,0 +1,48 @@
+// For every vertex in the mesh
+// Where vertices form 6 grids making a cube
+// With bounds of [-1, -1, -1] to [1, 1, 1]
+void MapCubeToSphere( Vector3& vPosition )
+{
+    float x2 = vPosition.x * vPosition.x;
+    float y2 = vPosition.y * vPosition.y;
+    float z2 = vPosition.z * vPosition.z;
+
+    vPosition.x = vPosition.x * sqrt( 1.0f - ( y2 * 0.5f ) - ( z2 * 0.5f ) + ( (y2 * z2) / 3.0f ) );
+    vPosition.y = vPosition.y * sqrt( 1.0f - ( z2 * 0.5f ) - ( x2 * 0.5f ) + ( (z2 * x2) / 3.0f ) );
+    vPosition.z = vPosition.z * sqrt( 1.0f - ( x2 * 0.5f ) - ( y2 * 0.5f ) + ( (x2 * y2) / 3.0f ) );
+}
+
+
+
+// Declared Variables
+// width         - number of vertices across the x axis
+// height        - number of vertices across the y axis
+// radius        - sphere's radius
+// pVertexBuffer - vertex buffer array
+
+// Grid facing negative z
+Vector3 vMinPosition( -1.0f, -1.0f, -1.0f );
+
+for ( int y = 0; y < height; ++y )
+{
+    for ( int x = 0; x < width; ++x )
+    {
+        Vector3 vPosition = vMinPosition;
+        vPosition.x += (float)x / (float)(width-1) * 2.0f; // Multiply by 2.0f to map position from -1 to +1
+        vPosition.y +- (float)y / (float)(height-1) * 2.0f; // Multiply by 2.0f to map position from -1 to +1
+
+        // Map the grid position into a sphere position
+        MapCubeToSphere( vPosition );
+
+        // The normal is just the vector from the center of the sphere.
+        Vector3 vNormal = vPosition.Normal();
+
+        // Extrude the sphere by the radius
+        vPosition *= radius;
+
+        // Assign to vertex buffer
+        pVertexBuffer[ y * width + x ].Position = vPosition;
+        pVertexBuffer[ y * width + x ].Normal = vNormal;
+    }
+}
+
