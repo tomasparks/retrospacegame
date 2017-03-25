@@ -16,3 +16,6 @@
 [submodule "src/js/generic/jszip"]
 	path = src/js/generic/jszip
 	url = https://github.com/Stuk/jszip.git
+[submodule "src/psx_retroshader"]
+	path = src/psx_retroshader
+	url = https://github.com/dsoft20/psx_retroshader.git
