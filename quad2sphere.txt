@@ -46,3 +46,84 @@ for ( int y = 0; y < height; ++y )
     }
 }
 
+
+<?php
+
+function QuadKey2TileCoordinates($quadkey) {
+
+  $x=0;
+  $y=0;
+
+  for ($i=0; $i<strlen($quadkey); $i++) {
+    $x = $x*2;
+    $y = $y*2;
+    switch (substr($quadkey, $i, 1)) {
+      case 0:
+        break;
+      case 1:
+        $x++;
+        break;
+      case 2:
+        $y++;
+        break;
+      case 3:
+        $x++;
+        $y++;
+        break;
+    }
+  }
+
+  return array($x,$y);
+
+}
+
+
+$filename=$argv[1];
+$quadkey=substr($filename, 0, strpos($filename,"."));
+
+$pos=QuadKey2TileCoordinates($quadkey);
+
+symlink ("../{$filename}", "links/{$pos[0]}_{$pos[1]}.png");
+
+?>
+
+$e1 = array  ( $plane[2][0] - $plane[1][0], // Position3 e1 = plane[1] - plane[0];
+               $plane[2][1] - $plane[1][1],
+               $plane[2][2] - $plane[1][2]);
+
+$e2 = array  ( $plane[3][0] - $plane[0][0], // Position3 e2 = plane[2] - plane[3];
+               $plane[3][1] - $plane[0][1],
+               $plane[3][2] - $plane[0][2]);
+
+$e3 = array  ( $plane[0][0] - $plane[1][0], // Position3 e3 = plane[3] - plane[0];
+               $plane[0][1] - $plane[1][1],
+               $plane[0][2] - $plane[1][2]);
+
+$e4 = array  ( $plane[3][0] - $plane[2][0], // Position3 e4 = plane[2] - plane[1];
+               $plane[3][0] - $plane[2][1],
+               $plane[3][0] - $plane[2][2]);
+
+
+$p1 = array ($e1[0]*0.5+$plane[1][0], //  Position3 p1 = e1 * 0.5f + plane[0];
+             $e1[1]*0.5+$plane[1][1],
+             $e1[2]*0.5+$plane[1][2]);
+
+$p2 = array ($e2[0]*0.5+$plane[0][0], //  Position3 p2 = e2 * 0.5f + plane[3];
+             $e2[1]*0.5+$plane[0][1],
+             $e1[2]*0.5+$plane[0][2]);
+
+$p3 = array ($e3[0]*0.5+$plane[1][0], //  Position3 p3 = e3 * 0.5f + plane[0];
+             $e3[1]*0.5+$plane[1][1],
+             $e3[2]*0.5+$plane[1][2]);
+
+$p4 = array ($e4[0]*0.5+$plane[2][0], //  Position3 p4 = e4 * 0.5f + plane[1];
+             $e4[1]*0.5+$plane[2][1],
+             $e4[2]*0.5+$plane[2][2]);
+
+$e5 = array ($p2[0] - $p1[0], // Position3 e5 = p2 - p1;
+             $p2[1] - $p1[1],
+             $p2[2] - $p1[2]);
+
+$p5 = array ($e5[0] * 0.5 + $p1[0], // Position3 p5 = e5 * 0.5f + p1;
+             $e5[1] * 0.5 + $p1[1],
+             $e5[2] * 0.5 + $p1[2]);

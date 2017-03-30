@@ -19,3 +19,6 @@
 [submodule "src/psx_retroshader"]
 	path = src/psx_retroshader
 	url = https://github.com/dsoft20/psx_retroshader.git
+[submodule "src/js/generic/electron"]
+	path = src/js/generic/electron
+	url = https://github.com/electron/electron.git
