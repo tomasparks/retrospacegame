@@ -25,3 +25,6 @@
 [submodule "src/php/generic/SimplexThingy"]
 	path = src/php/generic/SimplexThingy
 	url = https://github.com/Vazkii/SimplexThingy.git
+[submodule "data/textures/generic/rooms/freedoom"]
+	path = data/textures/generic/rooms/freedoom
+	url = https://github.com/freedoom/freedoom.git
