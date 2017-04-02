@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Create smooth transition between RPG tiles - ImageMagick</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - ImageMagick" href="/discourse-server/app.php/feed?sid=6e80b150c84a55980e81a8e4e561d0eb">	<link rel="alternate" type="application/atom+xml" title="Feed - News" href="/discourse-server/app.php/feed/news?sid=6e80b150c84a55980e81a8e4e561d0eb">	<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="/discourse-server/app.php/feed/forums?sid=6e80b150c84a55980e81a8e4e561d0eb">			<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Users" href="/discourse-server/app.php/feed/forum/1?sid=6e80b150c84a55980e81a8e4e561d0eb">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - Create smooth transition between RPG tiles" href="/discourse-server/app.php/feed/topic/14250?sid=6e80b150c84a55980e81a8e4e561d0eb">	
+	<link rel="canonical" href="https://www.imagemagick.org/discourse-server/viewtopic.php?t=14250">
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./assets/css/font-awesome.min.css?assets_version=24" rel="stylesheet">
+<link href="./styles/prosilver/theme/stylesheet.css?assets_version=24" rel="stylesheet">
+<link href="./styles/prosilver/theme/en/stylesheet.css?assets_version=24" rel="stylesheet">
+
+
+
+
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=24" rel="stylesheet">
+<![endif]-->
+
+
+
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar" role="banner">
+					<div class="inner">
+
+			<div id="site-description" class="site-description">
+				<a id="logo" class="logo" href="https://www.imagemagick.org" title="Home"><span class="sans-site_logo"></span></span></a>
+				<h1>ImageMagick</h1>
+				<p>Convert, Edit, or Compose Bitmap Images</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+        <script async="async" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-3129977114552745"
+          data-ad-slot="6345125851"
+          data-ad-format="auto"></ins>
+        <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+			</div>
+
+									<div id="search-box" class="search-box search-header" role="search">
+				<form action="./search.php?sid=6e80b150c84a55980e81a8e4e561d0eb" method="get" id="search">
+				<fieldset>
+					<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+					<button class="button button-search" type="submit" title="Search">
+						<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+					</button>
+					<a href="./search.php?sid=6e80b150c84a55980e81a8e4e561d0eb" class="button button-search-end" title="Advanced search">
+						<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+					</a>
+					<input type="hidden" name="sid" value="6e80b150c84a55980e81a8e4e561d0eb" />
+
+				</fieldset>
+				</form>
+			</div>
+						
+			</div>
+					</div>
+				<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="./search.php?search_id=unanswered&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="./search.php?search_id=active_topics&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="./search.php?sid=6e80b150c84a55980e81a8e4e561d0eb" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+																			<li>
+								<a href="./memberlist.php?mode=team&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="/discourse-server/app.php/help/faq?sid=6e80b150c84a55980e81a8e4e561d0eb" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="./ucp.php?mode=login&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="./ucp.php?mode=register&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+						<li class="breadcrumbs">
+							<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="https://www.imagemagick.org" itemprop="url" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="title">Home</span></a></span>
+										<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="./index.php?sid=6e80b150c84a55980e81a8e4e561d0eb" itemprop="url" accesskey="h" data-navbar-reference="index"><span itemprop="title">Board index</span></a></span>
+
+											<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="14"><a href="./viewforum.php?f=14&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" itemprop="url"><span itemprop="title">ImageMagick</span></a></span>
+															<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="1"><a href="./viewforum.php?f=1&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" itemprop="url"><span itemprop="title">Users</span></a></span>
+												</li>
+		
+					<li class="rightside responsive-search">
+				<a href="./search.php?sid=6e80b150c84a55980e81a8e4e561d0eb" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+	</div>
+
+	
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+		
+		
+<h2 class="topic-title"><a href="./viewtopic.php?f=1&amp;t=14250&amp;sid=6e80b150c84a55980e81a8e4e561d0eb">Create smooth transition between RPG tiles</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Questions and postings pertaining to the usage of ImageMagick regardless of the interface. This includes the command-line utilities, as well as the C and C++ APIs. Usage questions are like "How do I use ImageMagick to create drop shadows?".<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="./posting.php?mode=reply&amp;f=1&amp;t=14250&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="./viewtopic.php?f=1&amp;t=14250&amp;sid=6e80b150c84a55980e81a8e4e561d0eb&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="./search.php?sid=6e80b150c84a55980e81a8e4e561d0eb">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="./search.php?sid=6e80b150c84a55980e81a8e4e561d0eb" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="14250" />
+<input type="hidden" name="sf" value="msgonly" />
+<input type="hidden" name="sid" value="6e80b150c84a55980e81a8e4e561d0eb" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			11 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+		</div>
+
+
+
+
+			<div id="p49138" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile49138">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<strong><span class="username">dsavage</span></strong>							</dt>
+
+									
+						
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content49138">
+
+						<h3 class="first"><a href="#p49138">Create smooth transition between RPG tiles</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=1&amp;p=49138&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=49138&amp;sid=6e80b150c84a55980e81a8e4e561d0eb#p49138" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><span class="username">dsavage</span></strong> &raquo; </span>2009-07-19T16:31:55-07:00
+			</p>
+			
+			
+			
+			<div class="content">Hi everyone,<br>
+<br>
+I've created an RPG from scratch and recently created a map generator. The generator is working fairly good but the problem now is unless I spend a huge amount of time creating all possible combination the maps look relatively poor because there are tons of previously unused groupings.<br>
+<br>
+What I'd love to do is figure out a way to merge together one tile with up to 4 other different ones along the edge so they don't look like blocks. <br>
+<br>
+The tiles are 25x25 and gif, here are a couple examples of the "starting" tiles I'd like to use<br>
+<br>
+<img src="http://www.thefreeroller.com/exampletiles/grass.gif" class="postimage" alt="Image"> - grass<br>
+<img src="http://www.thefreeroller.com/exampletiles/sand.gif" class="postimage" alt="Image"> - sand<br>
+<img src="http://www.thefreeroller.com/exampletiles/tree.gif" class="postimage" alt="Image"> - forest<br>
+<br>
+And an example of what I am going for<br>
+<br>
+<img src="http://www.thefreeroller.com/exampletiles/examp.gif" class="postimage" alt="Image"> <br>
+<br>
+Thanks!</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p49145" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile49145">
+			<dt class="no-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=1663&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="avatar"><img class="avatar" src="./download/file.php?avatar=1663_1288079617.gif" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=1663&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" style="color: #00AA00;" class="username-coloured">anthony</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="./search.php?author_id=1663&amp;sr=posts&amp;sid=6e80b150c84a55980e81a8e4e561d0eb">8851</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> 2004-05-31T19:27:03-07:00</dd>		
+		
+											<dd class="profile-custom-field profile-authenticate"><strong>Authentication code:</strong> 8675308</dd>
+												<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Brisbane, Australia</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content49145">
+
+						<h3 ><a href="#p49145">Re: Create smooth transition between RPG tiles</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=1&amp;p=49145&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=49145&amp;sid=6e80b150c84a55980e81a8e4e561d0eb#p49145" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=1663&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" style="color: #00AA00;" class="username-coloured">anthony</a></strong> &raquo; </span>2009-07-19T20:26:18-07:00
+			</p>
+			
+			
+			
+			<div class="content">Nice tiles!  Do you have more of them?<br>
+<br>
+Okay.  You have a rectangular map, and you currently replace each position in the map with a particular tile,  but that produces a like or squared rectangles.<br>
+<br>
+Well the solution is relatively simple.   Don't generate a rectangular map, but generate it<br>
+on a much larger scale.<br>
+<br>
+For example, have a look at...<br>
+Dithering with a symbol pattern.<br>
+  <a href="http://www.imagemagick.org/Usage/quantize/#diy_symbols" class="postlink">http://www.imagemagick.org/Usage/quantize/#diy_symbols</a><br>
+<br>
+However if you are stuck with the map scale you are using. what you want to do is smooth the edges of each area.    Say you have a map of 3 numbers 1, 2, and 3....
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>1 1 1 1 3
+1 2 2 1 3
+2 2 3 3 3</code></pre></div>
+
+Obviously if you replace the above as is you will end up with a perfect 25x25 squares.<br>
+Which is not what you are after...
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>convert null: sand.gif grass.gif tree.gif \
+   \( -clone 1,1,1,1,3 +append \) \
+   \( -clone 1,2,2,1,3 +append \) \
+   \( -clone 2,2,3,3,3 +append \) \
+   -delete 0-3  -append  map_direct.gif</code></pre></div>
+<img src="http://www.cit.gu.edu.au/~anthony/public/map_direct.gif" class="postimage" alt="Image"><br>
+<br>
+<br>
+Instead of replacing each number directly with a particualr tile, create 3 'region' masks of<br>
+ANY COLOR, and transparency  each 25x25,  (0 = transparency)<br>
+<br>
+For example lets do number 1 as sand (of course your program would generate this...
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>convert -size 25x25 xc:none sand.gif \
+   \( -clone 1,1,1,1,0 +append \) \
+   \( -clone 1,0,0,1,0 +append \) \
+   \( -clone 0,0,0,0,0 +append \) \
+  -delete 0,1  -append  sand_mask.gif</code></pre></div>
+<img src="http://www.cit.gu.edu.au/~anthony/public/sand_mask.gif" class="postimage" alt="Image"><br>
+<br>
+Repeat for the other two tail patterns  2= grass  3 = forest<br>
+<img src="http://www.cit.gu.edu.au/~anthony/public/grass_mask.gif" class="postimage" alt="Image"><br>
+<img src="http://www.cit.gu.edu.au/~anthony/public/tree_mask.gif" class="postimage" alt="Image"><br>
+<br>
+Now blur that mask using <span style="color: #800000">-channel A -blur 0x12</span> <br>
+and threshold it at 50%   <span style="color: #800000">-threshold 50%</span><br>
+Do not worry about the color of the mask is -- it is not important, the shape is...
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>convert sand_mask.gif  -channel A -blur 0x12  \
+          -threshold 50% sand_mask_blured.gif</code></pre></div>
+<img src="http://www.cit.gu.edu.au/~anthony/public/sand_mask_blured.gif" class="postimage" alt="Image"><br>
+<br>
+now re-tile the shape masks to correct the colors.<br>
+convert sand_mask_blured.gif -size 200x200 tile:sand.gif \<br>
+        -alpha on  -compose Atop  -composite  sand_mask_tiled.gif<br>
+<img src="http://www.cit.gu.edu.au/~anthony/public/sand_mask_tiled.gif" class="postimage" alt="Image"><br>
+<br>
+repeat the above for the other parts,  and merge them together.<br>
+convert {sand,grass,tree}_mask_smooth.gif \<br>
+        -background red -flatten   map_merged.gif<br>
+<img src="http://www.cit.gu.edu.au/~anthony/public/map_merged.gif" class="postimage" alt="Image"><br>
+<br>
+Okay the red area shows that it does not work very well...   But it is a start.<br>
+<br>
+<br>
+A better way may be to blur all the colors as a single color map... 
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>convert null: -size 25x25 xc:red  xc:lime xc:blue \
+   \( -clone 1,1,1,1,3 +append \) \
+   \( -clone 1,2,2,1,3 +append \) \
+   \( -clone 2,2,3,3,3 +append \) \
+   -delete 0-3  -append  map_colormask.gif</code></pre></div>
+<img src="http://www.cit.gu.edu.au/~anthony/public/map_colormask.gif" class="postimage" alt="Image"><br>
+<br>
+then re-map the colors.
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>convert map_colormask.gif -blur 0x12 \
+        +dither  -map map_colormask.gif \
+        map_colormask_smooth.gif</code></pre></div>
+<img src="http://www.cit.gu.edu.au/~anthony/public/map_colormask_smooth.gif" class="postimage" alt="Image"><br>
+<br>
+Now you can extract (segment) each colored region,  For that you can use my script<br>
+   <a href="http://www.imagemagick.org/Usage/scripts/segment_image" class="postlink">http://www.imagemagick.org/Usage/scripts/segment_image</a><br>
+You can then tile (or color replace) them and merge together to form the map.<br>
+This command is a little more complex <img class="smilies" src="./images/smilies/icon_smile.gif" width="15" height="15" alt=":-)" title="Smile">
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>   segment_image map_colormask_smooth.gif - |\
+     convert - +swap   null: -size 200x200 \
+          tile:sand.gif tile:grass.gif tile:tree.gif \
+          -compose ATOP -layers composite \
+          -background red -flatten map_merge_2.gif</code></pre></div>
+<img src="http://www.cit.gu.edu.au/~anthony/public/map_merge_2.gif" class="postimage" alt="Image"><br>
+<br>
+HOWEVER this will likely fail for more than three colors, as you start using non-primary colors!<br>
+<br>
+<span style="font-style: italic">Does anyone have suggestions for more than three regions?</span><br>
+<br>
+<br>
+Another alternative is to generate a VERY small color map (one pixel be region), then use    Scale_X2 and similar like to enlarge.  <br>
+   <a href="http://scale2x.sourceforge.net/" class="postlink">http://scale2x.sourceforge.net/</a><br>
+   <a href="http://www.hiend3d.com/hq3x.html" class="postlink">http://www.hiend3d.com/hq3x.html</a><br>
+This is a special resize method that is designed to preserve colors, but has NOT been incorporated into ImageMagick as yet.   It is on a To-Do list though.<br>
+<br>
+However I think it would generate very angled borders, whcih is probably NOT what you want.<br>
+<br>
+<br>
+Anyone else have ideas on  smoothing a colored region map?  - <span style="font-style: italic">it is a great problem!</span><br>
+<br>
+Fred would you like to try your  Morphology Script?</div>
+
+			
+									
+									<div id="sig49145" class="signature">Anthony Thyssen   -- Webmaster for ImageMagick Example Pages<br>
+                  <a href="http://www.imagemagick.org/Usage/" class="postlink">http://www.imagemagick.org/Usage/</a></div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p49148" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile49148">
+			<dt class="no-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=1663&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="avatar"><img class="avatar" src="./download/file.php?avatar=1663_1288079617.gif" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=1663&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" style="color: #00AA00;" class="username-coloured">anthony</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="./search.php?author_id=1663&amp;sr=posts&amp;sid=6e80b150c84a55980e81a8e4e561d0eb">8851</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> 2004-05-31T19:27:03-07:00</dd>		
+		
+											<dd class="profile-custom-field profile-authenticate"><strong>Authentication code:</strong> 8675308</dd>
+												<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Brisbane, Australia</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content49148">
+
+						<h3 ><a href="#p49148">Re: Create smooth transition between RPG tiles</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=1&amp;p=49148&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=49148&amp;sid=6e80b150c84a55980e81a8e4e561d0eb#p49148" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=1663&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" style="color: #00AA00;" class="username-coloured">anthony</a></strong> &raquo; </span>2009-07-19T20:55:23-07:00
+			</p>
+			
+			
+			
+			<div class="content">Addundum...<br>
+<br>
+As you are dealing with a square array,  you will have at most 4 colors at any one corner. That means that each corner will have a mapping of a limited number of colors in a limmited number of ways. <br>
+<br>
+What you can then then is that you create your map,  NOT in squares, but  tiled corner images.<br>
+(ignoring edges which is a special case)<br>
+<br>
+For example, these are <span style="font-weight: bold">all</span> the corner combinations you can get!
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>  1,1       1,1     1,1     1,1     1,2
+  1,1       1,2     2,2     2,3     3,4</code></pre></div>
+And variations (rotations, flips) of these 5 tiles.<br>
+<br>
+However if you look at the posibilities, only the second case needs smoothing!!!!  All the other cases results in the normal result of a 'square map'  join of the regions!<br>
+<br>
+That means,  just generate you 'colored regions' map, then go through the original map matrix<br>
+looking for a 3:1 corner.   You can then overlay a rounded off version of the two colors in that corner, and continue looking.<br>
+<br>
+<br>
+This by the way is the same technique as used by 'Scale_2X' mentioned above, BUT modified so that it actually works at larger scalings  (in this case  Scale 25X!!!!)  This may be a better way to implement these 'scaling' techniques.</div>
+
+			
+									
+									<div id="sig49148" class="signature">Anthony Thyssen   -- Webmaster for ImageMagick Example Pages<br>
+                  <a href="http://www.imagemagick.org/Usage/" class="postlink">http://www.imagemagick.org/Usage/</a></div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p49149" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile49149">
+			<dt class="no-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=1663&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="avatar"><img class="avatar" src="./download/file.php?avatar=1663_1288079617.gif" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=1663&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" style="color: #00AA00;" class="username-coloured">anthony</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="./search.php?author_id=1663&amp;sr=posts&amp;sid=6e80b150c84a55980e81a8e4e561d0eb">8851</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> 2004-05-31T19:27:03-07:00</dd>		
+		
+											<dd class="profile-custom-field profile-authenticate"><strong>Authentication code:</strong> 8675308</dd>
+												<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Brisbane, Australia</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content49149">
+
+						<h3 ><a href="#p49149">Re: Create smooth transition between RPG tiles</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=1&amp;p=49149&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=49149&amp;sid=6e80b150c84a55980e81a8e4e561d0eb#p49149" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=1663&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" style="color: #00AA00;" class="username-coloured">anthony</a></strong> &raquo; </span>2009-07-19T21:09:55-07:00
+			</p>
+			
+			
+			
+			<div class="content">your other problem is to make the edges not so smooth.<br>
+<br>
+All I can say is,  create your color map region amd the use  Fred Wienhaus's   "Dispersion"<br>
+script on it. (use interpolate nearest-neightbour setting)   that will make it irregular.<br>
+    <a href="http://www.fmwconcepts.com/imagemagick/disperse/index.php" class="postlink">http://www.fmwconcepts.com/imagemagick/ ... /index.php</a><br>
+<br>
+Just don't go overboard on some of the settings.<br>
+  <br>
+When the colored regions have been 'dispersed' then tile each region as appropriate.<br>
+<br>
+So the final solution would be..
+<ul>
+<li>Map the matrix into a  colors regions map.</li>
+<li>Go though and round off the special case corners</li>
+<li>Run the colored region map though  "dispersion"</li>
+<li>tile each colored region appropriately.</li></ul>
+
+NOTE: The tiles do NOT need to actually match the grid size of the final map!!!! That is your map may be gridded to 40x40 squares but tiled with 25x25 pixel tiles! Each texture could even be a different tile size!<br>
+<br>
+NOTE: This does not solve the smoothing of a region map for the general case, only the specific case of a rectangular tiled grid.</div>
+
+			
+									
+									<div id="sig49149" class="signature">Anthony Thyssen   -- Webmaster for ImageMagick Example Pages<br>
+                  <a href="http://www.imagemagick.org/Usage/" class="postlink">http://www.imagemagick.org/Usage/</a></div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p49152" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile49152">
+			<dt class="no-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=9098&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="avatar"><img class="avatar" src="./download/file.php?avatar=9098_1277433197.jpg" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=9098&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" style="color: #00AA00;" class="username-coloured">fmw42</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="./search.php?author_id=9098&amp;sr=posts&amp;sid=6e80b150c84a55980e81a8e4e561d0eb">20585</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> 2007-07-02T17:14:51-07:00</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sunnyvale, California, USA</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content49152">
+
+						<h3 ><a href="#p49152">Re: Create smooth transition between RPG tiles</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=1&amp;p=49152&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=49152&amp;sid=6e80b150c84a55980e81a8e4e561d0eb#p49152" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=9098&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" style="color: #00AA00;" class="username-coloured">fmw42</a></strong> &raquo; </span>2009-07-19T22:09:14-07:00
+			</p>
+			
+			
+			
+			<div class="content">I am still trying to figure out what the goal and process is here!!!<br>
+<br>
+RPG - rocket propelled grenade  <img class="smilies" src="./images/smilies/icon_eek.gif" width="15" height="17" alt=":shock:" title="Shocked"> <br>
+<br>
+OH! role playing game  <img class="smilies" src="./images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"><br>
+<br>
+The only thing that I can think of off the top might be to do each tile to create one image surrounded by transparency. Then use Anthony's spread option to morphology to spread the tile into the transparent areas, then composite the different images together.  <br>
+<br>
+Or do it on the map where you make one map for each index surrounded by transparency. Then spread the indices. Then blend the index images. Then round to the nearest integer, then fill in the tiles according to the new index map.<br>
+<br>
+None of this is tested - just some possibilities to consider.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p49165" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile49165">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<strong><span class="username">dsavage</span></strong>							</dt>
+
+									
+						
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content49165">
+
+						<h3 ><a href="#p49165">Re: Create smooth transition between RPG tiles</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=1&amp;p=49165&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=49165&amp;sid=6e80b150c84a55980e81a8e4e561d0eb#p49165" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><span class="username">dsavage</span></strong> &raquo; </span>2009-07-20T09:18:48-07:00
+			</p>
+			
+			
+			
+			<div class="content">Thanks for all the help!<br>
+<br>
+I've been playing around with the suggestions and I think the disperse is the way to go.<br>
+<br>
+I use the method in the first reply to lay out various combination's then disperse but the problem is tiles like the tree lose their texture. I've been trying to use the color replace script to keep the textures but it doesn't seem to want to work for me so I'm not sure how to get the colors replaced. Is there something else I can try out?<br>
+<br>
+This is the error I'm getting. I'm using cygwin on a windows system.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>$    segment_image map_colormask_smooth.gif - |     convert - +swap   null: -si
+ze 200x200           tile:sand.gif tile:grass.gif tile:tree.gif           -comp
+ose ATOP -layers composite           -background red -flatten map_merge_2.gif
+convert.exe: unable to open image `/tmp/segment_image.7004/working.mpc': No such
+ file or directory @ blob.c/OpenBlob/2480.
+convert.exe: unable to open image `/tmp/segment_image.7004/working.mpc': No such
+ file or directory @ blob.c/OpenBlob/2480.
+convert.exe: missing an image filename `txt:-' @ convert.c/ConvertImageCommand/2
+800.
+convert.exe: Improper image header `-' @ miff.c/ReadMIFFImage/466.
+convert.exe: missing an image filename `-' @ convert.c/ConvertImageCommand/2800.
+
+convert.exe: no decode delegate for this image format `C:/Users/D/AppData/Lo
+cal/Temp/magick-HhdFJota' @ constitute.c/ReadImage/503.
+convert.exe: Missing Null Image List Separator layers Composite @ mogrify.c/Mogr
+ifyImageList/7639.</code></pre></div>
+
+Edit: Just want to say I did really like the curved idea and that plus some disperse would have looked great but my only issue there is there would be a huge number of possible tiles as the "lines" I don't think would easily line up with random patterns. I'll be generating maps often and dealing with creating new tiles every time will cost too much in resources.<br>
+<br>
+I also tried cropping a chunk off the side of a tile then blending that over top another tile, which looked not to bad. To get that to look good I think I could have cropped a couple different spots and blended them each differently and somehow worked in disperse but this might be a bit too advanced for me right now. The water to shore would be ideal for this imo.</div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p49167" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile49167">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<strong><span class="username">dsavage</span></strong>							</dt>
+
+									
+						
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content49167">
+
+						<h3 ><a href="#p49167">Re: Create smooth transition between RPG tiles</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=1&amp;p=49167&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=49167&amp;sid=6e80b150c84a55980e81a8e4e561d0eb#p49167" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><span class="username">dsavage</span></strong> &raquo; </span>2009-07-20T10:32:32-07:00
+			</p>
+			
+			
+			
+			<div class="content">Here are a number of other tiles I did manually. I used some free resources here and there but nothing with any requirements so feel free to use anything you want.<br>
+<br>
+<a href="http://www.thefreeroller.com/exampletiles/tiles.rar" class="postlink">http://www.thefreeroller.com/exampletiles/tiles.rar</a></div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p49176" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile49176">
+			<dt class="no-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=1663&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="avatar"><img class="avatar" src="./download/file.php?avatar=1663_1288079617.gif" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=1663&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" style="color: #00AA00;" class="username-coloured">anthony</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="./search.php?author_id=1663&amp;sr=posts&amp;sid=6e80b150c84a55980e81a8e4e561d0eb">8851</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> 2004-05-31T19:27:03-07:00</dd>		
+		
+											<dd class="profile-custom-field profile-authenticate"><strong>Authentication code:</strong> 8675308</dd>
+												<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Brisbane, Australia</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content49176">
+
+						<h3 ><a href="#p49176">Re: Create smooth transition between RPG tiles</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=1&amp;p=49176&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=49176&amp;sid=6e80b150c84a55980e81a8e4e561d0eb#p49176" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=1663&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" style="color: #00AA00;" class="username-coloured">anthony</a></strong> &raquo; </span>2009-07-20T20:21:07-07:00
+			</p>
+			
+			
+			
+			<div class="content">They are an interesting set of tiles.  Sounds like a great game.  What game is it??<br>
+I have always liked these thype of plan view role playing games.<br>
+<br>
+Okay first the key to generating maps is -- ignore the tiles!<br>
+<br>
+Generate the map using specific colors for each area.  they don't even have to be real colors, just say rgb(1,1,1) for area 1  and rgb(2,2,2) for area 2.  These can then be replaced using the dither method mentioned before...  <br>
+   <a href="http://www.imagemagick.org/Usage/quantize/#diy_symbols" class="postlink">http://www.imagemagick.org/Usage/quantize/#diy_symbols</a><br>
+<br>
+For testing purposes primary colors works better, but then you can use the color index directly as<br>
+a tile reference number to a tile sequence as I do in those examples.<br>
+<br>
+<br>
+Okay -- forget the tiles, use areas.    Map the whole area as we did above..<br>
+<img src="http://www.cit.gu.edu.au/~anthony/public/map_colormask.gif" class="postimage" alt="Image"><br>
+<br>
+Now you can round off the corners, as described above by looking though your original map matrix for that special case (and a little more on that below).<br>
+<br>
+<span style="font-style: italic">ASIDE; can you provide an example of the map matrix and the number to tile correspondance?<br>
+The roads and ships don't need to be separate number, but can just be the same number  (see next post)</span><br>
+<br>
+At this point grab Freds disperse script<br>
+  <a href="http://www.fmwconcepts.com/imagemagick/downloadcounter.php?scriptname=disperse&amp;dirname=disperse" class="postlink">http://www.fmwconcepts.com/imagemagick/ ... e=disperse</a><br>
+and open it in a text editor.   On the last three 'convert' commands add  the option <span style="color: #800000">-interpolate NearestNeighbor</span><br>
+For example...
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>convert $tmp -interpolate NearestNeighbor \</code></pre></div>
+
+This is important to prevent color mixing from the interpolation. Fred can modify the script to make this option to the script!<br>
+<br>
+Now disperse the colored regions  (keep density at 1)
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>disperse -s 4 -d 1 -c 10 map_colormask_smooth.gif map_colormask_disperse.gif</code></pre></div>
+
+Now you can tile the reagions.  for example replace red with a tile, using draw.
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>   convert xc:red xc:green xc:blue map_colormask_disperse.gif +append \
+               -tile ~/tiles/sand.gif -draw 'color 0,0 replace' \
+               -tile ~/tiles/grass.gif -draw 'color 1,0 replace \
+               -tile ~/tiles/tree.gif -draw 'color 2,0 replace \
+               -chop 3,0  map_tiled.gif</code></pre></div>
+<img src="http://www.cit.gu.edu.au/~anthony/public/map_tiled.gif" class="postimage" alt="Image"><br>
+<br>
+For this to work I needed to add some specific colored pixels to one side for draw to use.<br>
+The 'dither tiling' method above would work better but only with 'indexed colors'.<br>
+<br>
+For some reason I have not looked at interpolation is still happening along the edges of the tiled areas, thus the slight color distortion from the tiling operations. But it is close,  Just a matter of getting "disperse" script fixed to preserve colors.</div>
+
+			
+									
+									<div id="sig49176" class="signature">Anthony Thyssen   -- Webmaster for ImageMagick Example Pages<br>
+                  <a href="http://www.imagemagick.org/Usage/" class="postlink">http://www.imagemagick.org/Usage/</a></div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p49177" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile49177">
+			<dt class="no-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=1663&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="avatar"><img class="avatar" src="./download/file.php?avatar=1663_1288079617.gif" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=1663&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" style="color: #00AA00;" class="username-coloured">anthony</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="./search.php?author_id=1663&amp;sr=posts&amp;sid=6e80b150c84a55980e81a8e4e561d0eb">8851</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> 2004-05-31T19:27:03-07:00</dd>		
+		
+											<dd class="profile-custom-field profile-authenticate"><strong>Authentication code:</strong> 8675308</dd>
+												<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Brisbane, Australia</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content49177">
+
+						<h3 ><a href="#p49177">Re: Create smooth transition between RPG tiles</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=1&amp;p=49177&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=49177&amp;sid=6e80b150c84a55980e81a8e4e561d0eb#p49177" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=1663&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" style="color: #00AA00;" class="username-coloured">anthony</a></strong> &raquo; </span>2009-07-20T20:34:31-07:00
+			</p>
+			
+			
+			
+			<div class="content">Going back to rounding of corners.<br>
+<br>
+I forgot one imporant case of corner joins....
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>1,2
+2,1</code></pre></div>
+The problem here is you either leave it very squareish, OR make a path from 1 to 1  or 2 to 2<br>
+Which you should do probably depends on the tiles invoved,  or if they can exist in your map.<br>
+<br>
+<span style="font-style: italic">Can I get an example of your map matrix and the translation table to the tiles?  That is the numbers that generate the map, not the map itself</span><br>
+<br>
+Roads for example should probably be joined,  mountains and swamps probably shouldn't as it probably represents a mountain pass.  Basicially I think the more commonly traveled surface should join up, and separate the other terrain.<br>
+<br>
+Rivers can be tricky,  could it be a ford for land based movement to cross but not river boats?<br>
+or only river boats and not land movement, or prehaps it is a bridge to allow for BOTh river and land movement.    The same goes if the two tiles are land and sea, though that is not likely to happen.<br>
+<br>
+For the 'corner' tile situation
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>1,1
+1,2</code></pre></div>
+where you want to round off '2' instead of rounding you could on seeing this arrangenet in the map matrix, just draw a dimonds shaped figure for region one, on the corner.  That is when ever a corner has 3 of the same region, draw a diamond of that region on the corner, to smooth it.<br>
+<br>
+The Disperse step should then make the result look quite smooth.</div>
+
+			
+									
+									<div id="sig49177" class="signature">Anthony Thyssen   -- Webmaster for ImageMagick Example Pages<br>
+                  <a href="http://www.imagemagick.org/Usage/" class="postlink">http://www.imagemagick.org/Usage/</a></div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p49199" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile49199">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<strong><span class="username">dsavage</span></strong>							</dt>
+
+									
+						
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content49199">
+
+						<h3 ><a href="#p49199">Re: Create smooth transition between RPG tiles</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=1&amp;p=49199&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=49199&amp;sid=6e80b150c84a55980e81a8e4e561d0eb#p49199" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><span class="username">dsavage</span></strong> &raquo; </span>2009-07-21T11:56:02-07:00
+			</p>
+			
+			
+			
+			<div class="content">Here is a sample map, only using 4 tiles in the generator right now to get started:<br>
+<br>
+100=tree<br>
+101=sand<br>
+102=water<br>
+103=grass<br>
+<br>
+it's a bit rough and a little to random but I can easily tweak the settings later on<br>
+<br>
+the rpg is actually a Facebook app so you'll need an account to try it out, <a href="http://apps.facebook.com/madventure" class="postlink">http://apps.facebook.com/madventure</a> - it's still in beta<br>
+<br>
+I'll be out of town most of the week so I might be delayed in my replies<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>100,100,100,100,100,100,100,103,102,102,102,101,101,100,100,100,100,100,102,100,100,103,100,100,100,100,100,100,100,100,100,100,100,102,102,102,103,103,102,100,100,100,101,100,103,103,102,101,101,100,
+100,100,100,100,100,100,100,102,102,102,102,102,101,103,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,103,102,102,100,100,100,100,100,100,103,102,100,100,100,102,103,100,
+100,100,100,100,100,100,100,103,102,102,102,103,103,103,103,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,101,101,100,100,
+100,100,100,100,100,100,103,102,103,103,103,103,102,102,101,102,103,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,101,100,100,100,100,100,100,100,100,100,100,103,103,103,103,
+100,100,100,100,100,103,102,103,102,101,102,101,101,102,100,101,103,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,102,102,100,100,100,100,100,100,100,100,100,100,100,100,100,
+100,102,100,100,100,101,103,103,103,103,102,102,102,101,103,103,103,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,103,101,102,103,102,100,100,100,100,100,100,100,102,100,100,100,
+103,103,100,103,101,102,102,102,102,101,102,102,102,102,102,102,103,100,100,100,100,100,100,100,100,100,100,100,103,100,102,102,103,103,100,101,102,102,102,102,100,100,100,100,100,100,100,101,100,103,
+102,100,100,103,102,102,101,102,102,102,102,102,101,101,102,102,100,103,102,100,100,100,100,100,100,100,100,100,101,102,101,102,101,102,102,102,102,102,102,103,100,100,102,100,100,100,100,101,101,103,
+100,100,101,103,102,102,102,102,102,102,102,102,102,102,101,100,100,103,102,102,101,100,103,100,100,100,100,103,102,102,102,102,102,102,102,102,102,101,100,100,100,100,103,100,100,100,100,100,101,102,
+100,100,101,102,101,102,102,102,102,102,102,102,101,102,102,103,102,102,102,101,101,102,100,100,100,100,100,101,102,102,102,102,102,102,102,102,102,101,103,100,100,100,100,100,100,100,103,103,103,102,
+100,100,101,102,102,102,102,102,102,102,102,102,102,101,101,103,102,101,102,102,103,103,100,100,100,100,100,102,102,102,103,101,102,102,102,102,102,102,100,100,103,100,100,100,100,102,102,103,100,100,
+100,100,102,102,102,102,102,102,102,102,102,102,101,103,103,101,102,102,102,102,101,102,102,103,100,100,100,100,100,103,103,100,100,102,102,102,102,102,102,102,103,100,100,101,102,103,102,102,102,101,
+100,103,102,102,102,102,102,102,102,101,102,102,102,102,103,102,102,102,102,102,102,102,102,101,103,100,103,100,100,102,101,101,103,102,102,102,102,102,102,101,100,102,102,102,102,102,102,102,102,102,
+102,103,102,102,102,102,102,102,102,101,102,102,101,100,101,102,102,102,102,102,102,102,102,101,101,100,103,100,103,103,102,102,102,102,102,102,102,102,102,102,100,100,100,102,102,102,102,102,102,102,
+100,103,102,102,102,102,102,102,102,102,102,102,101,100,102,102,102,102,101,102,102,103,102,100,101,103,100,103,100,103,100,101,102,101,102,101,102,102,101,102,102,103,100,103,102,102,102,102,102,102,
+100,102,102,102,102,102,102,102,102,102,102,102,102,102,103,102,102,102,102,102,102,103,100,100,103,101,100,100,100,100,100,102,100,100,100,103,103,102,102,103,102,103,100,101,102,102,102,102,102,102,
+102,102,102,102,102,102,102,102,102,102,102,100,101,101,102,102,102,102,102,102,103,101,100,100,100,102,102,100,100,100,100,101,103,100,100,100,100,103,102,102,103,100,100,100,103,102,102,102,102,102,
+101,102,102,102,102,102,102,102,102,102,101,103,103,102,102,102,102,103,100,103,101,102,103,103,100,100,100,100,100,100,100,100,103,100,100,100,100,103,102,103,101,103,100,100,102,102,102,102,102,102,
+102,102,102,102,102,102,102,102,102,103,100,100,102,102,102,102,103,100,100,100,101,102,102,100,100,100,100,100,100,100,100,100,100,100,100,100,100,103,102,103,103,103,103,102,102,102,102,102,102,102,
+102,102,102,102,102,102,102,102,102,102,100,100,103,103,103,100,100,102,103,103,100,103,101,100,103,100,100,100,100,100,100,100,100,100,100,100,100,103,101,101,102,102,102,102,102,102,102,102,102,102,
+102,103,102,102,102,102,102,102,102,102,101,103,103,103,100,100,100,100,103,103,100,103,102,102,100,100,100,100,102,103,100,100,100,100,100,103,102,103,103,102,102,102,102,102,102,102,102,102,102,103,
+102,103,103,102,102,103,102,102,101,103,100,100,102,102,100,100,100,100,100,103,100,103,103,101,102,100,100,103,102,100,100,100,100,100,102,103,101,103,102,102,102,102,102,102,102,102,102,102,102,101,
+102,102,102,102,102,102,102,102,102,103,103,100,103,100,100,100,100,100,102,102,103,100,101,101,100,100,103,102,100,100,100,100,100,103,100,100,103,100,103,102,102,102,102,102,102,102,102,102,102,101,
+102,102,102,103,102,102,101,102,102,101,100,100,100,100,100,100,100,100,103,102,100,103,102,102,100,100,100,100,100,100,100,100,100,100,100,100,103,100,100,102,102,102,102,102,102,101,102,102,102,102,
+102,102,103,103,102,102,102,103,103,102,100,100,100,100,100,100,100,100,100,103,100,102,102,102,103,100,100,100,100,100,100,100,100,100,100,100,100,100,103,102,102,103,102,102,102,102,101,102,102,100,
+102,102,100,103,103,102,102,101,100,100,100,100,100,100,103,102,103,100,100,100,103,102,102,102,103,100,100,100,100,100,100,100,100,100,100,100,100,100,100,102,102,102,102,102,102,102,103,100,103,100,
+102,103,100,100,100,102,101,101,100,102,103,100,100,102,101,102,101,103,100,101,102,102,102,103,103,100,100,100,100,100,100,100,100,100,100,100,100,100,100,102,102,102,102,102,102,102,102,101,100,100,
+102,100,100,100,102,103,103,102,100,103,103,102,100,100,100,100,100,102,100,103,103,102,102,103,103,100,100,100,103,100,100,100,100,100,100,100,100,100,100,100,101,103,102,102,102,102,102,102,100,100,
+103,100,103,103,100,100,100,102,100,103,100,100,100,100,100,100,100,100,100,100,100,100,101,101,101,100,100,100,102,102,100,100,100,100,100,100,100,100,100,102,100,101,101,102,102,103,103,100,100,100,
+103,102,100,100,100,100,100,100,100,100,103,100,100,100,100,100,100,100,100,100,100,102,102,102,102,100,100,103,101,103,100,100,100,100,100,100,100,100,100,100,100,102,100,101,102,101,102,101,100,100,
+100,100,100,100,100,100,100,100,100,100,103,103,102,100,101,101,103,101,101,103,103,102,102,102,101,102,102,101,102,101,100,100,100,100,100,100,100,100,100,100,100,100,100,100,102,100,102,100,102,100,
+100,100,100,100,100,100,100,100,100,100,100,100,100,100,103,101,103,101,103,102,102,101,102,102,103,102,102,101,102,103,103,101,100,100,101,100,100,100,100,100,100,100,100,100,103,103,100,100,100,100,
+100,100,100,100,100,100,100,100,100,100,100,100,100,100,103,103,102,102,102,102,102,102,102,102,102,102,102,102,102,101,103,102,100,103,101,103,100,100,100,100,100,100,100,100,100,100,100,100,100,100,
+100,100,100,100,100,100,100,100,100,100,100,100,103,103,101,100,102,102,102,102,102,102,102,102,102,102,102,102,102,102,101,103,100,101,102,101,102,100,100,100,100,100,100,100,100,100,100,100,100,100,
+100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,102,102,102,102,102,102,102,102,102,101,100,101,102,102,102,102,103,102,102,101,100,100,100,100,100,102,100,100,100,100,100,100,100,100,
+100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,101,102,103,103,100,100,100,100,100,100,100,100,100,100,100,100,
+100,100,103,100,100,100,100,100,100,100,100,100,100,100,100,100,103,102,101,103,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,100,100,100,103,100,100,100,100,100,100,100,100,
+100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,103,101,103,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,103,102,101,103,103,101,100,100,100,100,100,100,
+100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,103,100,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,101,102,102,103,103,101,103,100,103,101,101,100,100,100,100,
+100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,103,103,101,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,103,102,102,102,102,102,103,102,102,100,100,100,100,100,
+100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,101,101,101,101,102,102,102,102,102,102,102,102,102,101,102,102,102,102,102,102,102,103,101,102,102,102,102,103,101,103,100,100,100,100,100,
+100,100,100,100,100,100,100,103,103,102,100,100,100,100,100,100,103,103,100,101,102,102,102,102,102,102,102,102,100,103,102,102,102,102,102,101,101,102,102,102,102,102,102,102,103,100,100,100,100,100,
+100,100,100,100,100,100,100,101,102,102,100,100,100,100,100,100,100,102,103,102,102,102,102,102,102,102,101,103,103,103,102,102,102,102,102,102,102,102,102,102,102,102,103,101,101,102,100,100,100,100,
+100,100,100,100,100,100,103,102,102,101,102,100,100,100,100,100,103,102,102,102,102,102,102,102,102,102,102,102,103,102,102,102,102,102,102,102,102,102,102,102,102,102,103,102,102,103,100,100,100,100,
+102,103,100,100,100,102,102,102,102,102,102,103,102,100,100,103,102,102,102,102,101,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,100,100,100,100,
+100,100,100,100,100,102,102,102,102,102,102,102,102,100,101,103,102,101,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,101,100,100,100,
+100,100,100,100,100,102,102,102,102,101,102,103,103,102,102,102,103,101,102,102,102,102,102,102,102,102,102,102,102,103,102,102,102,102,102,102,102,102,102,102,102,102,103,102,102,102,102,100,100,100,
+100,100,100,100,103,102,102,102,102,102,102,102,103,103,102,102,102,102,102,102,102,101,101,102,101,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,102,101,102,102,102,102,102,100,100,100,
+100,100,100,100,101,102,102,102,102,102,102,102,102,101,101,101,103,101,102,102,102,101,100,103,102,102,102,101,101,102,102,102,102,102,102,102,102,102,101,102,101,101,102,102,102,102,102,101,103,100,
+100,100,101,100,100,103,102,102,102,102,102,101,102,102,103,102,103,101,102,102,102,101,100,101,102,101,101,102,103,101,102,102,102,102,102,102,102,102,103,101,103,102,102,102,102,102,102,101,103,100,</code></pre></div></div>
+
+			
+									
+									
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+				<div id="p49218" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile49218">
+			<dt class="no-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=1663&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="avatar"><img class="avatar" src="./download/file.php?avatar=1663_1288079617.gif" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=1663&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" style="color: #00AA00;" class="username-coloured">anthony</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="./search.php?author_id=1663&amp;sr=posts&amp;sid=6e80b150c84a55980e81a8e4e561d0eb">8851</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> 2004-05-31T19:27:03-07:00</dd>		
+		
+											<dd class="profile-custom-field profile-authenticate"><strong>Authentication code:</strong> 8675308</dd>
+												<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Brisbane, Australia</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content49218">
+
+						<h3 ><a href="#p49218">Re: Create smooth transition between RPG tiles</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;f=1&amp;p=49218&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="./viewtopic.php?p=49218&amp;sid=6e80b150c84a55980e81a8e4e561d0eb#p49218" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=1663&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" style="color: #00AA00;" class="username-coloured">anthony</a></strong> &raquo; </span>2009-07-21T18:21:08-07:00
+			</p>
+			
+			
+			
+			<div class="content">Very good, I can work with that...<br>
+<br>
+Just a quick check,  the map is one line =&gt; one row<br>
+making it...  50 by 50 tiles.  right!<br>
+<br>
+Okay.  Now for some fanciness.<br>
+<br>
+Convert map to a color image (grayscale)  one pixel per square...<br>
+I am assuming a Q16 version of IM for this.
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>( echo "P2 50 50 65535"
+  tr ',' ' ' &lt; map_data.txt
+) | convert - -level 100,103  -scale 2000% map_data.png</code></pre></div>
+
+The above adds a NetPBM PGM header, removes the commas, and adds it the end of the PGM image format.   IM reads the image, levels it so color values 100=black and 103 = white, then scales it into 20x20 pixel squares (modify to suit).<br>
+<br>
+Now we can smooth any 'corners' and 'crossing points' in the image, by drawing diamonds of the appropriate color at those intersections.  Something I will get back to later as it is more program control.   For now I will just use the blur method...
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>convert map_data.png -blur 0x3 +dither -map map_data.png map_blur.png</code></pre></div>
+It may have been better is water was at one end of the numbers.<br>
+<br>
+If you look at this you can see how 'bluring' fails for grayscale or more than three RGB colors.<br>
+The corner rounding method will be best here!<br>
+<br>
+You can do the disperse operation, and as even the odified "disperse" script is currently NOT preserving colors, I remap the colors again.  Remember disperse should be able to be fixed in this regard so check with Fred Weinhaus, "fwm42"
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>disperse -s 4 -d 1 -c 10 map_blur.png miff:- |\
+    convert - +dither -map map_data.png map_disperse.png</code></pre></div>
+
+Now lets overlay the tiles using the 'tile dither' technique   (only works for grayscale images)<br>
+Note that FX is slow for this.  In large image with few tiles it may be better to do the 'draw' color tile replacement shown earlier.
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>convert map_disperse.png     {tree,sand,water,grass}.gif \
+  -virtual-pixel tile  -fx 'u[floor(3.9999*u)+1]' \
+  map.png</code></pre></div>
+
+Now we just need to get the corner rounding problem fixed!</div>
+
+			
+									
+									<div id="sig49218" class="signature">Anthony Thyssen   -- Webmaster for ImageMagick Example Pages<br>
+                  <a href="http://www.imagemagick.org/Usage/" class="postlink">http://www.imagemagick.org/Usage/</a></div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider" />
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="./posting.php?mode=reply&amp;f=1&amp;t=14250&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="./viewtopic.php?f=1&amp;t=14250&amp;sid=6e80b150c84a55980e81a8e4e561d0eb&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="./viewtopic.php?f=1&amp;t=14250&amp;sid=6e80b150c84a55980e81a8e4e561d0eb">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			11 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="./viewforum.php?f=1&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Users”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="./viewforum.php?f=14&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="jumpbox-cat-link"> <span> ImageMagick</span></a></li>
+																<li><a href="./viewforum.php?f=1&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Users</span></a></li>
+																<li><a href="./viewforum.php?f=2&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Developers</span></a></li>
+																<li><a href="./viewforum.php?f=3&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Bugs</span></a></li>
+																<li><a href="./viewforum.php?f=24&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Consulting</span></a></li>
+																<li><a href="./viewforum.php?f=19&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Kudos and Rants</span></a></li>
+																<li><a href="./viewforum.php?f=4&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Announce</span></a></li>
+																<li><a href="./viewforum.php?f=15&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="jumpbox-cat-link"> <span> ImageMagick Program Interfaces</span></a></li>
+																<li><a href="./viewforum.php?f=6&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; MagickWand</span></a></li>
+																<li><a href="./viewforum.php?f=23&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Magick++</span></a></li>
+																<li><a href="./viewforum.php?f=7&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; PerlMagick</span></a></li>
+																<li><a href="./viewforum.php?f=18&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; IMagick</span></a></li>
+																<li><a href="./viewforum.php?f=10&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; MagickWand for PHP</span></a></li>
+																<li><a href="./viewforum.php?f=8&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Windows COM+ &amp; Visual Basic</span></a></li>
+																<li><a href="./viewforum.php?f=9&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Magick Scripting Language</span></a></li>
+																<li><a href="./viewforum.php?f=27&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Magick.NET</span></a></li>
+																<li><a href="./viewforum.php?f=16&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="jumpbox-cat-link"> <span> ImageMagick Studio Web Interface</span></a></li>
+																<li><a href="./viewforum.php?f=5&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; MagickStudio</span></a></li>
+																<li><a href="./viewforum.php?f=21&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="jumpbox-cat-link"> <span> Digital Image Processing</span></a></li>
+																<li><a href="./viewforum.php?f=22&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Digital Image Processing</span></a></li>
+																<li><a href="./viewforum.php?f=26&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" class="jumpbox-sub-link"><span class="spacer"></span> <span> &#8627; &nbsp; Fred's Scripts</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+	<div class="stat-block online-list">
+		<h3>Who is online</h3>
+		<p>Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Bing [Bot]</span>, <span style="color: #9E8DA7;" class="username-coloured">MSNbot Media</span> and 12 guests</p>
+	</div>
+
+			</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+							<span class="crumb"><a href="https://www.imagemagick.org" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Home</span></a></span>									<span class="crumb"><a href="./index.php?sid=6e80b150c84a55980e81a8e4e561d0eb" data-navbar-reference="index"><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC-7">UTC-07:00</span></li>
+							<li class="rightside">
+				<a href="./ucp.php?mode=delete_cookies&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete all board cookies</span>
+				</a>
+			</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="./memberlist.php?mode=team&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="./memberlist.php?mode=contactadmin&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+									</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	<img src="./cron.php?cron_type=cron.task.text_reparser.poll_option&amp;sid=6e80b150c84a55980e81a8e4e561d0eb" width="1" height="1" alt="cron" /></div>
+
+<script type="text/javascript" src="./assets/javascript/jquery.min.js?assets_version=24"></script>
+<script type="text/javascript" src="./assets/javascript/core.js?assets_version=24"></script>
+
+
+
+<script type="text/javascript" src="./styles/prosilver/template/forum_fn.js?assets_version=24"></script>
+<script type="text/javascript" src="./styles/prosilver/template/ajax.js?assets_version=24"></script>
+
+
+
+</body>
+</html>

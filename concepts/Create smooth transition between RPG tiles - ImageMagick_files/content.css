@@ -1,0 +1,25 @@
+/* Effective stylesheet produced by snapshot save */
+.postbody { padding: 0px; line-height: 1.48em; width: 76%; float: left; position: relative; }
+.postbody h3.first { font-size: 1.7em; }
+.postbody h3 { float: left; font-size: 1.5em; padding: 2px 0px 0px; margin-top: 0px ! important; margin-bottom: 0.3em ! important; text-transform: none; border: medium none; font-family: "Trebuchet MS",Verdana,Helvetica,Arial,sans-serif; line-height: 125%; }
+.has-profile .postbody h3 { float: none ! important; margin-right: 180px; }
+.postbody .content { font-size: 1.3em; overflow-x: auto; }
+.postbody img.postimage { max-width: 100%; box-sizing: border-box; }
+.content { clear: both; min-height: 3em; overflow: hidden; line-height: 1.4em; font-family: "Lucida Grande","Trebuchet MS",Verdana,Helvetica,Arial,sans-serif; font-size: 1em; padding-bottom: 1px; }
+.content p { font-family: "Lucida Grande","Trebuchet MS",Verdana,Helvetica,Arial,sans-serif; font-size: 1.2em; margin-bottom: 1em; line-height: 1.4em; }
+.content li { list-style-type: inherit; }
+.content ul, .content ol { margin: 0.8em 0px 0.9em 3em; }
+p.author { margin-bottom: 0.6em; padding: 0px 0px 5px; font-family: Verdana,Helvetica,Arial,sans-serif; font-size: 1em; line-height: 1.2em; clear: both; }
+.signature { margin-top: 1.5em; padding-top: 0.2em; font-size: 1.1em; border-top: 1px solid transparent; clear: left; line-height: 140%; overflow: hidden; width: 100%; }
+.codebox { padding: 3px; border: 1px solid transparent; font-size: 1em; margin: 1em 0px 1.2em; }
+.codebox p { text-transform: uppercase; border-bottom: 1px solid transparent; margin-bottom: 3px; font-size: 0.8em ! important; font-weight: bold; display: block; }
+.codebox code { overflow: auto; display: block; height: auto; max-height: 200px; padding-top: 5px; font: 0.9em/1.3em Monaco,"Andale Mono","Courier New",Courier,monospace; margin: 2px 0px; }
+.postprofile { margin: 5px 0px 10px; min-height: 80px; border-style: solid; border-color: transparent; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; border-width: 0px 0px 0px 1px; width: 22%; float: right; display: inline; }
+.postprofile dd, .postprofile dt { line-height: 1.2em; margin-left: 8px; }
+.postprofile dd { overflow: hidden; text-overflow: ellipsis; }
+.postprofile strong { font-weight: normal; }
+.postprofile dt.no-profile-rank, .postprofile dd.profile-rank, .postprofile .search-result-date { margin-bottom: 10px; }
+.postprofile .has-avatar .avatar-container { margin-bottom: 3px; overflow: hidden; }
+.postprofile .avatar { display: block; float: left; max-width: 100%; }
+.postprofile .avatar img { display: block; height: auto ! important; max-width: 100%; }
+.postprofile .profile-posts a { font-weight: normal; }

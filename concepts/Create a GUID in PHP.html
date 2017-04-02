@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	
+    Create a GUID in PHP
+
+</title>
+    <script type="text/javascript" async="" src="Create%20a%20GUID%20in%20PHP_files/ga.js"></script><script src="Create%20a%20GUID%20in%20PHP_files/jquery-1.4.1.js" type="text/javascript"></script>
+    <link href="Create%20a%20GUID%20in%20PHP_files/Site.css" rel="stylesheet" type="text/css"><link type="text/css" href="Create%20a%20GUID%20in%20PHP_files/telerik.common.min.css" rel="stylesheet">
+<link type="text/css" href="Create%20a%20GUID%20in%20PHP_files/telerik.telerik.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="page">
+        <div id="header">
+            <div id="title">
+                <h1>
+                    GUID: the guid generator</h1>
+            </div>
+            <div id="menucontainer">
+                <ul id="menu">
+                    <li>
+                        <a href="http://guid.us/">Home</a></li>
+                    <li>
+                        <a href="http://guid.us/GUID">Code Samples</a></li>
+                    <li>
+                        <a href="http://guid.us/Test/GUID">GUID Test and Validate</a></li>
+                    <li>
+                        <a href="http://guid.us/ShoutOut">Shout Out</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            
+    <h2>
+        PHP</h2>
+    <p>
+        Its easy to make GUIDs in PHP. Below is clean code using windows COM to get GUIDs.
+        When the PHP creates GUIDs or UUIDs they are V4 guids.
+    </p>
+    <div><div id="highlighter_678268" class="syntaxhighlighter  php"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php variable">$guid</code> <code class="php plain">= com_create_guid();</code></div><div class="line number2 index1 alt1"><code class="php functions">echo</code> <code class="php variable">$guid</code><code class="php plain">;</code></div></div></td></tr></tbody></table></div></div>
+    <p>
+        If you are not a on windows based platform you can roll this code for making GUIDs
+        in PHP</p>
+    <div><div id="highlighter_314493" class="syntaxhighlighter  php"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php keyword">function</code> <code class="php plain">getGUID(){</code></div><div class="line number2 index1 alt1"><code class="php spaces">    </code><code class="php keyword">if</code> <code class="php plain">(function_exists(</code><code class="php string">'com_create_guid'</code><code class="php plain">)){</code></div><div class="line number3 index2 alt2"><code class="php spaces">        </code><code class="php keyword">return</code> <code class="php plain">com_create_guid();</code></div><div class="line number4 index3 alt1"><code class="php spaces">    </code><code class="php plain">}</code><code class="php keyword">else</code><code class="php plain">{</code></div><div class="line number5 index4 alt2"><code class="php spaces">        </code><code class="php plain">mt_srand((double)microtime()*10000);</code><code class="php comments">//optional for php 4.2.0 and up.</code></div><div class="line number6 index5 alt1"><code class="php spaces">        </code><code class="php variable">$charid</code> <code class="php plain">= </code><code class="php functions">strtoupper</code><code class="php plain">(md5(uniqid(rand(), true)));</code></div><div class="line number7 index6 alt2"><code class="php spaces">        </code><code class="php variable">$hyphen</code> <code class="php plain">= </code><code class="php functions">chr</code><code class="php plain">(45);</code><code class="php comments">// "-"</code></div><div class="line number8 index7 alt1"><code class="php spaces">        </code><code class="php variable">$uuid</code> <code class="php plain">= </code><code class="php functions">chr</code><code class="php plain">(123)</code><code class="php comments">// "{"</code></div><div class="line number9 index8 alt2"><code class="php spaces">            </code><code class="php plain">.</code><code class="php functions">substr</code><code class="php plain">(</code><code class="php variable">$charid</code><code class="php plain">, 0, 8).</code><code class="php variable">$hyphen</code></div><div class="line number10 index9 alt1"><code class="php spaces">            </code><code class="php plain">.</code><code class="php functions">substr</code><code class="php plain">(</code><code class="php variable">$charid</code><code class="php plain">, 8, 4).</code><code class="php variable">$hyphen</code></div><div class="line number11 index10 alt2"><code class="php spaces">            </code><code class="php plain">.</code><code class="php functions">substr</code><code class="php plain">(</code><code class="php variable">$charid</code><code class="php plain">,12, 4).</code><code class="php variable">$hyphen</code></div><div class="line number12 index11 alt1"><code class="php spaces">            </code><code class="php plain">.</code><code class="php functions">substr</code><code class="php plain">(</code><code class="php variable">$charid</code><code class="php plain">,16, 4).</code><code class="php variable">$hyphen</code></div><div class="line number13 index12 alt2"><code class="php spaces">            </code><code class="php plain">.</code><code class="php functions">substr</code><code class="php plain">(</code><code class="php variable">$charid</code><code class="php plain">,20,12)</code></div><div class="line number14 index13 alt1"><code class="php spaces">            </code><code class="php plain">.</code><code class="php functions">chr</code><code class="php plain">(125);</code><code class="php comments">// "}"</code></div><div class="line number15 index14 alt2"><code class="php spaces">        </code><code class="php keyword">return</code> <code class="php variable">$uuid</code><code class="php plain">;</code></div><div class="line number16 index15 alt1"><code class="php spaces">    </code><code class="php plain">}</code></div><div class="line number17 index16 alt2"><code class="php plain">}</code></div></div></td></tr></tbody></table></div></div>
+    <p>
+       To use the above functon:
+    </p>
+    <div><div id="highlighter_814216" class="syntaxhighlighter  php"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php variable">$GUID</code> <code class="php plain">= getGUID();</code></div><div class="line number2 index1 alt1"><code class="php functions">echo</code> <code class="php variable">$GUID</code><code class="php plain">;</code></div></div></td></tr></tbody></table></div></div>
+    <p>
+        code thanks to: <a href="http://www.rodsdot.com/">rodsdot</a> These guys are so GUID
+        they UUed my ID.</p>
+    
+<script type="text/javascript" src="Create%20a%20GUID%20in%20PHP_files/shCore.js"></script>
+<script type="text/javascript" src="Create%20a%20GUID%20in%20PHP_files/shAutoloader.js"></script>
+<link type="text/css" rel="stylesheet" href="Create%20a%20GUID%20in%20PHP_files/shCoreDefault.css">
+<script type="text/javascript"><!--
+/* Script removed by snapshot save */
+--></script>
+
+            <div id="footer">
+                <!-- Begin: adBrite, Generated: 2012-04-12 10:52:27  -->
+                <script type="text/javascript"><!--
+/* Script removed by snapshot save */
+--></script>
+                <span style="white-space: nowrap;">
+                    <script type="text/javascript"><!--
+/* Script removed by snapshot save */
+--></script><script src="Create%20a%20GUID%20in%20PHP_files/text_group.php.js" type="text/javascript"></script>
+                    <a target="_top" href="http://www.adbrite.com/mb/commerce/purchase_form.php?opid=2133791&amp;afsid=1" dq1cqzr="" hidden="">
+                        <img src="urn:download-error:http://files.adbrite.com/mb/images/adbrite-your-ad-here-leaderboard.gif" style="background-color: #CCCCCC; border: none; padding: 0; margin: 0;" alt="Your Ad Here" width="14" height="90" border="0"></a></span>
+                <!-- End: adBrite -->
+                <br>
+                GUID.us ©
+                2017
+                |
+                <a href="http://guid.us/Home/PrivacyNotice">Privacy Notice</a>
+                <br>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="Create%20a%20GUID%20in%20PHP_files/jquery-1.4.2.min.js"></script>
+
+    <script type="text/javascript"><!--
+/* Script removed by snapshot save */
+--></script>
+
+
+</body></html>

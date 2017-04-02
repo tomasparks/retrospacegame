@@ -1,0 +1,75 @@
+/* Effective stylesheet produced by snapshot save */
+html, body { color: rgb(83, 100, 130); background-color: rgb(245, 247, 250); }
+h1 { color: rgb(255, 255, 255); }
+h2 { color: rgb(40, 49, 63); }
+h3 { border-bottom-color: rgb(204, 204, 204); color: rgb(17, 80, 152); }
+hr { border-color: rgb(204, 204, 204) rgb(255, 255, 255) rgb(255, 255, 255); }
+a { color: rgb(16, 82, 137); }
+a:hover { color: rgb(211, 17, 65); }
+.postlink { border-bottom-color: rgb(54, 138, 210); color: rgb(54, 138, 210); }
+.postlink:visited { border-bottom-color: rgb(93, 143, 189); color: rgb(93, 143, 189); }
+.postlink:hover { background-color: rgb(208, 228, 246); color: rgb(13, 68, 115); }
+.signature a, .signature a:hover { background-color: transparent; }
+.top i { color: rgb(153, 153, 153); }
+.arrow-left:hover, .arrow-right:hover { color: rgb(54, 138, 210); }
+.wrap { background-color: rgb(255, 255, 255); border-color: rgb(230, 233, 237); }
+.headerbar { color: rgb(255, 255, 255); }
+.headerbar, .forumbg { background-color: rgb(18, 163, 235); background-image: linear-gradient(to bottom, rgb(106, 206, 255) 0%, rgb(0, 118, 177) 2px, rgb(18, 163, 235) 92px, rgb(18, 163, 235) 100%); background-repeat: repeat-x; }
+.navbar { background-color: rgb(202, 220, 235); }
+.post:target .content { color: rgb(0, 0, 0); }
+.post:target h3 a { color: rgb(0, 0, 0); }
+.bg1 { background-color: rgb(236, 243, 247); }
+table.zebra-list tr:nth-child(2n+1) td, ul.zebra-list li:nth-child(2n+1) { background-color: rgb(236, 243, 247); }
+.bg2 { background-color: rgb(225, 235, 242); }
+table.zebra-list tr:nth-child(2n) td, ul.zebra-list li:nth-child(2n) { background-color: rgb(225, 235, 242); }
+ul.navlinks { border-top-color: rgb(255, 255, 255); }
+.icon.icon-blue, a:hover .icon.icon-blue { color: rgb(25, 109, 181); }
+.icon.icon-gray, a:hover .icon.icon-gray { color: rgb(119, 119, 119); }
+.icon.icon-lightgray, a:hover .icon.icon-lightgray { color: rgb(153, 153, 153); }
+.icon.icon-black, a:hover .icon.icon-black { color: rgb(51, 51, 51); }
+.alert_close .icon::before { background-color: rgb(255, 255, 255); }
+.jumpbox .dropdown li { border-top-color: rgb(204, 204, 204); }
+.jumpbox-cat-link { background-color: rgb(0, 118, 177); border-top-color: rgb(0, 118, 177); color: rgb(255, 255, 255); }
+.jumpbox-cat-link:hover { background-color: rgb(18, 163, 235); border-top-color: rgb(18, 163, 235); color: rgb(255, 255, 255); }
+.jumpbox .dropdown .pointer-inner { border-color: rgb(225, 235, 242) transparent; }
+.jumpbox-sub-link { background-color: rgb(225, 235, 242); }
+.jumpbox-sub-link:hover { background-color: rgb(241, 248, 255); }
+.copyright { color: rgb(85, 85, 85); }
+.postbody { color: rgb(51, 51, 51); }
+.content { color: rgb(51, 51, 51); }
+.signature { border-top-color: rgb(204, 204, 204); }
+.codebox { background-color: rgb(255, 255, 255); border-color: rgb(201, 210, 216); }
+.codebox p { border-bottom-color: rgb(204, 204, 204); }
+.codebox code { color: rgb(46, 139, 87); }
+.postprofile { color: rgb(102, 102, 102); border-color: rgb(255, 255, 255); }
+.postprofile strong { color: rgb(0, 0, 0); }
+.button { border-color: rgb(199, 195, 191); background-color: rgb(233, 233, 233); background-image: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(233, 233, 233) 100%); box-shadow: 0px 0px 0px 1px rgb(255, 255, 255) inset; color: rgb(211, 17, 65); }
+.button:hover, .button:focus { border-color: rgb(10, 142, 208); background-color: rgb(255, 255, 255); background-image: linear-gradient(to bottom, rgb(233, 233, 233) 0%, rgb(255, 255, 255) 100%); text-shadow: 1px 1px 0px rgb(255, 255, 255), -1px -1px 0px rgb(255, 255, 255), -1px -1px 0px rgba(188, 42, 77, 0.2); }
+.button .icon, .button-secondary { color: rgb(143, 143, 143); }
+.button-secondary:focus, .button-secondary:hover, .button:focus .icon, .button:hover .icon { color: rgb(10, 142, 208); }
+.button-search:hover, .button-search-end:hover { border-color: rgb(199, 195, 191); }
+.caret { border-color: rgb(218, 218, 218); }
+.caret { border-color: rgb(199, 195, 191); }
+.search-box .inputbox, .search-box .inputbox:hover, .search-box .inputbox:focus { border-color: rgb(199, 195, 191); }
+.search-header { box-shadow: 0px 0px 10px rgb(0, 117, 176); }
+.responsive-tab .responsive-tab-link::before { border-color: rgb(83, 100, 130); }
+.responsive-tab .responsive-tab-link:hover::before { border-color: rgb(211, 17, 65); }
+select { border-color: rgb(102, 102, 102); background-color: rgb(250, 250, 250); color: rgb(0, 0, 0); }
+label { color: rgb(66, 80, 103); }
+.inputbox { background-color: rgb(255, 255, 255); border-color: rgb(180, 186, 192); color: rgb(51, 51, 51); }
+.inputbox:-moz-placeholder { color: rgb(51, 51, 51); }
+.inputbox:hover { border-color: rgb(17, 163, 234); }
+.inputbox:focus { border-color: rgb(17, 163, 234); }
+.inputbox:focus:-moz-placeholder { color: transparent; }
+a.button1, input.button1, input.button3, a.button2, input.button2 { color: rgb(0, 0, 0); background-color: rgb(239, 239, 239); background-image: linear-gradient(to bottom, rgb(210, 210, 210) 0%, rgb(239, 239, 239) 100%); }
+a.button2, input.button2, input.button3 { border-color: rgb(102, 102, 102); }
+a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, input.button3:hover { border-color: rgb(211, 17, 65); color: rgb(211, 17, 65); background-color: rgb(210, 210, 210); background-image: linear-gradient(to bottom, rgb(239, 239, 239) 0%, rgb(210, 210, 210) 100%); }
+input.button1:focus, input.button2:focus, input.button3:focus { border-color: rgb(17, 163, 234); color: rgb(15, 73, 135); }
+.phpbb_alert { background-color: rgb(255, 255, 255); border-color: rgb(153, 153, 153); }
+.darken { background-color: rgb(0, 0, 0); }
+.dropdown .pointer { border-color: rgb(185, 185, 185) transparent; }
+.dropdown .pointer-inner { border-color: rgb(255, 255, 255) transparent; }
+.dropdown .dropdown-contents { background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-color: rgb(185, 185, 185); box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2); }
+.dropdown-up .dropdown-contents { box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.2); }
+.dropdown li, .dropdown li li { border-color: rgb(220, 220, 220); }
+.dropdown li.separator { border-color: rgb(220, 220, 220); }

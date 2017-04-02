@@ -22,3 +22,6 @@
 [submodule "src/js/generic/electron"]
 	path = src/js/generic/electron
 	url = https://github.com/electron/electron.git
+[submodule "src/php/generic/SimplexThingy"]
+	path = src/php/generic/SimplexThingy
+	url = https://github.com/Vazkii/SimplexThingy.git

@@ -1,0 +1,45 @@
+Retro 16-bit Change Log
+
+2015
+
+3-30-15 First posting only a few things have been textured. 
+
+4-5-15 Almost all of the blocks are done, A good chunck of mobs are done as well. Enjoy. 
+
+4-10-15 All the "blocks" are done, here is a list of everything going at the momment.  
+
+4-29-15 All the mobs are done expect for the horse folder. I'll get back to it later. 
+
+4-29-15 12:06 PM central time, Just noticed TNT was never turned 16-bit it has now been fixed. 
+
+5-25-15 I would be updating this soon but due to data loss, All of the new work i was doing has been erased sorry for the invoncience. This pack will still be recviving updates in the future. 
+
+6-15-15 Finally update time not exactly the way i wanted it to be but hey GUI is done. :) I would have inculded items and GUI but I lost the items when i had to reinstall my laptop. 
+
+6-26-15 Finally done with horses, Im really happy the pack is almost done. Screenshots coming soon :) 
+
+7-5-15 Everything is done but the items :D 
+
+7-15-15 Items almost done updating to avoid data loss again. Enjoy :) 
+
+7-22-15 Everything is done! :D 
+
+8-8-15 Furnace, Dropper and Dispenser has had its shading improved.
+
+2-25-16 Updated the Mojang Logo to be 16-bit, also the folders name has been changed since 1.9 is just about to come out.
+
+11-30-16 Updated for the Combat Update, Frost Burn Update & Exploration Update, Other changes include: Steve, Alec, English Font is now blue, Villagers got a face lift, zombie villagers are now textured, Witch got a face lift, pig is now a new shade of pink, zombie pigman is wearing clothes and is a new shade of pink, Acacia Wood has been toned down a bit, All Dark oak colors are now a dark brown instead of black, Birch log top is a new color, jungle door has a new door nob, dropper has more shading, dispenser has more shading, title screen redone and the Gui has received a major make over. On a side note i have decided to skip texturing the clock and compass due to the sheer size of the file now, sorry. If you know a way to texture it quickly let me know.
+
+12-1-16 Fixed the font and Start Screen it is now easy to read. Title screen has been changed to blue aswell. Dark Oak, Oak and Jungle Doors have had there door nobs moved.
+
+12-5-16 Hopefully Last update for a bit, The following has been changed; 
+Planks: All of them so they blend better. 
+Logs: Spruce, Jungle, Acacia, Log Tops: Oak & Jungle, same reason as the planks. Doors & Door Sprites: Jungle, Spruce, Acacia
+Sapplings: Acacia
+Wooden Armor Stand & Sprite is now less contrasting. 
+The Lock on the Widgets file is now light blue.
+Lastly the pack logo is now just a polarbear, no background.
+
+12-9-16 Looks like I was wrong XD, sorry about that guys, I updated the Wool, Clay, Glass & Shulker Colors. They all now take full advantage of the pack being 16-bit. This is great for pixel art and model building :)
+
+12-11-16 Made the Regular sign birch so it is easier to read.

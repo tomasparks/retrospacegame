@@ -1,0 +1,2 @@
+/* Effective stylesheet produced by snapshot save */
+.responsive-tab .responsive-tab-link::before { content: ""; position: absolute; left: 10px; top: 7px; height: 0.125em; width: 14px; border-bottom: 0.125em solid transparent; border-top: 0.375em double transparent; }

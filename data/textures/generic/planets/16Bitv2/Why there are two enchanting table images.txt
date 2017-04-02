@@ -1,0 +1,8 @@
+Reason why there is two enchanting table images.
+
+This is incase you want to use this pack for 1.7 or lower.
+
+1. Take the image right click it and hit copy.
+2. Go inside the texture pack until you see gui, click that.
+3. Go into container then paste that version of the of the image.
+4. done.

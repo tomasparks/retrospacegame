@@ -1,0 +1,24 @@
+/* Effective stylesheet produced by snapshot save */
+body { background-color: rgb(92, 135, 178); font-size: 0.75em; font-family: Verdana,Helvetica,sans-serif; margin: 0px; padding: 0px; color: rgb(105, 105, 105); }
+a:link { color: rgb(3, 74, 243); text-decoration: underline; }
+a:visited { color: rgb(80, 90, 188); }
+a:hover { color: rgb(29, 96, 255); text-decoration: none; }
+a:active { color: rgb(18, 235, 135); }
+p, ul { margin-bottom: 20px; line-height: 1.6em; }
+h1, h2, h3, h4, h5, h6 { font-size: 1.5em; color: rgb(0, 0, 0); font-family: Arial,Helvetica,sans-serif; }
+h1 { font-size: 2em; padding-bottom: 0px; margin-bottom: 0px; }
+h2 { padding: 0px 0px 10px; }
+.page { width: 90%; margin-left: auto; margin-right: auto; }
+#header { position: relative; margin-bottom: 0px; color: rgb(0, 0, 0); padding: 0px; }
+#header h1 { font-weight: bold; padding: 5px 0px; margin: 0px; color: rgb(255, 255, 255); border: medium none; line-height: 0.75em; font-family: Arial,Helvetica,sans-serif; font-size: 32px ! important; }
+#main { padding: 30px 30px 15px; background-color: rgb(255, 255, 255); margin-bottom: 30px; }
+#footer { color: rgb(153, 153, 153); padding: 10px 0px; text-align: center; line-height: normal; margin: 0px; font-size: 0.9em; }
+ul#menu { border-bottom: 1px solid rgb(92, 135, 178); padding: 0px 0px 2px; position: relative; margin: 0px; text-align: right; }
+ul#menu li { display: inline; list-style: outside none none; }
+ul#menu li a { padding: 10px 20px; font-weight: bold; text-decoration: none; line-height: 2.8em; background-color: rgb(232, 238, 244); color: rgb(3, 74, 243); }
+ul#menu li a:hover { background-color: rgb(255, 255, 255); text-decoration: none; }
+ul#menu li a:active { background-color: rgb(166, 226, 166); text-decoration: none; }
+table { border: 1px solid rgb(232, 238, 244); border-collapse: collapse; }
+table td { padding: 5px; border: 1px solid rgb(232, 238, 244); }
+#menucontainer { margin-top: 40px; }
+div#title { display: block; float: left; text-align: left; }

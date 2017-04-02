@@ -1,0 +1,7 @@
+/* Effective stylesheet produced by snapshot save */
+.icon, .button .icon { display: inline-block; font-weight: normal; font-style: normal; font-variant: normal; font-family: FontAwesome; font-size: 14px; line-height: 1; text-rendering: auto; }
+.icon::before { padding-right: 2px; }
+.button .icon::before { padding-right: 0px; }
+.icon.icon-md { font-size: 10px; }
+.arrow-left:hover .icon { margin-left: -5px; margin-right: 5px; }
+.alert_close .icon::before { padding: 0px; border-radius: 50%; width: 11px; display: block; line-height: 0.9; height: 12px; }

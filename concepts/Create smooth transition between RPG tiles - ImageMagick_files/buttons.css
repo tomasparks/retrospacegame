@@ -1,0 +1,19 @@
+/* Effective stylesheet produced by snapshot save */
+.button { display: inline-block; padding: 2px 8px; font-size: 13px; font-weight: normal; font-family: "Open Sans","Droid Sans",Verdana,Arial,Helvetica; line-height: 1.4; text-align: center; white-space: nowrap; vertical-align: middle; touch-action: manipulation; cursor: pointer; -moz-user-select: none; border: 1px solid transparent; border-radius: 4px; }
+.button:focus, .button:hover { text-decoration: none; outline: medium none; }
+.caret { border-left: 1px solid; position: relative; right: -6px; }
+.caret i { vertical-align: top; }
+.button-search, .button-search-end { float: left; border-radius: 0px; margin: 0px; padding: 2px 5px; }
+.button-search-end { border-left-width: 0px; border-radius: 0px 4px 4px 0px; }
+.search-header .button-search, .search-header .button-search-end { border-top-width: 0px; border-bottom-width: 0px; padding: 3px 5px; }
+.search-header .button-search-end { border-right-width: 0px; }
+.button-icon-only { padding-left: 3px; padding-right: 3px; }
+.post-buttons { float: right; list-style: outside none none; margin-top: 2px; }
+.has-profile .post-buttons { float: none; position: absolute; margin: 0px; right: 0px; top: 5px; }
+.post-buttons > li { float: left; margin-right: 3px; }
+.post-buttons .button, .format-buttons .button { padding-left: 3px; padding-right: 3px; }
+.post-buttons .button span { font-size: 0px; }
+.post-buttons .dropdown { top: 18px; }
+.hasjs .postbody .post-buttons { max-width: 40%; }
+button::-moz-focus-inner { padding: 0px; border: 0px none; }
+ul.linklist.bulletin > li.small-icon::before { display: none; }

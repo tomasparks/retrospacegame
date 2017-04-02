@@ -1,0 +1,103 @@
+/* Effective stylesheet produced by snapshot save */
+html { font-size: 100%; height: 101%; }
+body { font-family: Verdana,Helvetica,Arial,sans-serif; font-size: 10px; line-height: normal; margin: 0px; padding: 12px 0px; overflow-wrap: break-word; }
+h1 { font-family: "Trebuchet MS",Arial,Helvetica,sans-serif; margin-right: 200px; margin-top: 15px; font-weight: bold; font-size: 2em; }
+h2 { font-family: "Trebuchet MS",Arial,Helvetica,sans-serif; font-weight: normal; font-size: 2em; margin: 0.8em 0px 0.2em; }
+h3 { font-family: Arial,Helvetica,sans-serif; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid transparent; margin-bottom: 3px; padding-bottom: 2px; font-size: 1.05em; margin-top: 20px; }
+p { line-height: 1.3em; font-size: 1.1em; margin-bottom: 1.5em; }
+img { border-width: 0px; }
+hr { border-width: 1px 0px 0px; border-style: solid; border-color: transparent; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; height: 1px; margin: 5px 0px; display: block; clear: both; }
+hr.dashed { border-top-style: dashed; margin: 10px 0px; }
+hr.divider { display: none; }
+p.jumpbox-return { margin-top: 10px; margin-bottom: 0px; float: left; }
+b, strong { font-weight: bold; }
+i, em { font-style: italic; }
+ul { list-style-type: disc; }
+li { display: list-item; }
+ul ul, ol ul { list-style-type: circle; }
+a:hover { text-decoration: underline; }
+.wrap { border: 1px solid transparent; border-radius: 8px; margin: 0px auto; max-width: 1152px; min-width: 625px; padding: 15px; }
+@media only screen and (max-width: 1220px), only screen and (max-device-width: 1220px) {
+  .wrap { margin: 0px 12px; }
+}
+.page-body { margin: 4px 0px; clear: both; }
+.page-footer { clear: both; }
+.page-footer h3 { margin-top: 20px; }
+.logo { float: left; width: auto; padding: 10px 13px 0px 10px; }
+.logo:hover { text-decoration: none; }
+.site-description { float: left; width: 65%; }
+.site-description h1 { margin-right: 0px; }
+.headerbar { margin-bottom: 4px; padding: 5px; border-radius: 7px; }
+.navbar { padding: 3px 10px; border-radius: 7px; }
+.post { padding: 5px 10px; margin-bottom: 4px; background-repeat: no-repeat; background-position: 100% 0px; border-radius: 7px; position: relative; }
+.navbar ul.linklist { padding: 2px 0px; list-style-type: none; }
+ul.linklist { display: block; margin: 0px; }
+ul.linklist > li { float: left; font-size: 1.1em; line-height: 2.2em; list-style-type: none; margin-right: 7px; padding-top: 1px; width: auto; }
+ul.linklist > li.rightside, p.rightside, a.rightside { float: right; margin-right: 0px; margin-left: 7px; text-align: right; }
+ul.navlinks { border-top: 1px solid transparent; }
+ul.linklist li.responsive-menu { position: relative; margin: 0px 5px 0px 0px; }
+ul.linklist .dropdown { top: 22px; }
+ul.linklist.bulletin > li::before { display: inline-block; content: "•"; font-size: inherit; line-height: inherit; padding-right: 4px; }
+ul.linklist.bulletin > li:first-child::before, ul.linklist.bulletin > li.rightside:last-child::before { content: none; }
+ul.linklist.bulletin > li.no-bulletin::before { content: none; }
+.responsive-menu::before { display: none ! important; }
+a.header-avatar span::after { content: ""; display: inline-block; font: 14px/1 FontAwesome; padding-left: 6px; padding-top: 2px; vertical-align: top; }
+.dropdown-container { position: relative; }
+.dropdown-container-right { float: right; }
+.dropdown-container-left { float: left; }
+.dropdown { display: none; position: absolute; left: 0px; top: 1.2em; z-index: 2; border: 1px solid transparent; border-radius: 5px; padding: 9px 0px 0px; margin-right: -500px; }
+.dropdown-container.topic-tools { float: left; }
+.dropdown-up .dropdown { top: auto; bottom: 1.2em; padding: 0px 0px 9px; }
+.dropdown-left .dropdown, .nojs .rightside .dropdown { left: auto; right: 0px; margin-left: -500px; margin-right: 0px; }
+.dropdown-button-control .dropdown { top: 24px; }
+.dropdown-button-control.dropdown-up .dropdown { top: auto; bottom: 24px; }
+.dropdown .pointer, .dropdown .pointer-inner { position: absolute; width: 0px; height: 0px; border-width: 0px 10px 10px; border-bottom: 10px solid transparent; border-left: 10px dashed transparent; border-right: 10px dashed transparent; transform: rotate(360deg); display: block; }
+.dropdown-up .pointer, .dropdown-up .pointer-inner { border-bottom-width: 0px; border-top: 10px solid transparent; }
+.dropdown .pointer { right: auto; left: 10px; top: -1px; z-index: 3; }
+.dropdown-up .pointer { bottom: -1px; top: auto; }
+.dropdown-left .dropdown .pointer, .nojs .rightside .dropdown .pointer { left: auto; right: 10px; }
+.dropdown .pointer-inner { top: auto; bottom: -11px; left: -10px; }
+.dropdown-up .pointer-inner { bottom: auto; top: -11px; }
+.dropdown .dropdown-contents { z-index: 2; overflow-x: hidden; overflow-y: auto; border: 1px solid transparent; border-radius: 5px; padding: 5px; position: relative; max-height: 300px; }
+.dropdown-contents a { display: block; padding: 5px; }
+.jumpbox { margin: 5px 0px; }
+.jumpbox .dropdown li { border-top: 1px solid transparent; }
+.jumpbox .dropdown-select { margin: 0px; }
+.jumpbox .dropdown-contents { padding: 0px; text-decoration: none; }
+.jumpbox .dropdown-contents li { padding: 0px; }
+.jumpbox .dropdown-contents a { margin-right: 20px; padding: 5px 10px; text-decoration: none; width: 100%; }
+.jumpbox .spacer { display: inline-block; width: 0px; }
+.dropdown-contents a { display: block; padding: 5px; }
+.jumpbox .dropdown-select { margin: 0px; }
+.jumpbox .dropdown-contents a { text-decoration: none; }
+.dropdown li { display: list-item; border-top: 1px dotted transparent; float: none ! important; line-height: normal ! important; font-size: 1em ! important; list-style: outside none none; margin: 0px; white-space: nowrap; text-align: left; }
+.dropdown-contents > li { padding-right: 15px; }
+.dropdown li:first-child, .dropdown li.separator + li, .dropdown li li { border-top: 0px none; }
+.wrap .dropdown li, .dropdown.wrap li, .dropdown-extended li { white-space: normal; }
+.dropdown li.separator { border-top: 1px solid transparent; padding: 0px; }
+.dropdown li.separator:first-child, .dropdown li.separator:last-child { display: none ! important; }
+.breadcrumbs .crumb { float: left; font-weight: bold; overflow-wrap: normal; }
+.breadcrumbs .crumb::before { content: "‹"; font-weight: bold; padding: 0px 0.5em; }
+.breadcrumbs .crumb:first-child::before { content: none; }
+.breadcrumbs .crumb a { white-space: nowrap; text-overflow: ellipsis; vertical-align: bottom; overflow: hidden; }
+.left-box { float: left; width: auto; text-align: left; max-width: 100%; }
+.action-bar { font-size: 11px; margin: 4px 0px; }
+.action-bar .button { margin-right: 5px; float: left; }
+.action-bar .button-search { margin-right: 0px; }
+.pagination { float: right; text-align: right; width: auto; }
+.action-bar.bar-bottom .pagination { margin-top: 0px; }
+.phpbb_alert { border: 1px solid transparent; display: none; left: 0px; padding: 0px 25px 20px; position: fixed; right: 0px; top: 150px; z-index: 50; width: 620px; margin: 0px auto; }
+@media only screen and (max-height: 500px), only screen and (max-device-width: 500px) {
+  .phpbb_alert { top: 25px; }
+}
+.phpbb_alert .alert_close { float: right; margin-right: -36px; margin-top: -8px; }
+.phpbb_alert p { margin: 8px 0px; padding-bottom: 8px; }
+.darkenwrapper { display: none; position: relative; z-index: 44; }
+.darken { position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0.5; z-index: 45; }
+.copyright { padding: 5px; text-align: center; }
+.stat-block { clear: both; }
+.top-anchor { display: block; position: absolute; top: -20px; }
+.inner::after, ul.linklist::after, .action-bar::after, .notification_text::after, .tabs-container::after, .tabs > ul::after, .minitabs > ul::after, .postprofile .avatar-container::after { clear: both; content: ""; display: block; }
+.smilies { vertical-align: text-bottom; }
+.dropdown-extended .header::after { content: ""; display: table; clear: both; }
+.linklist .quick-links { margin: 0px 7px 0px 0px; }

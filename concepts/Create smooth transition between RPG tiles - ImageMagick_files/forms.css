@@ -1,0 +1,31 @@
+/* Effective stylesheet produced by snapshot save */
+fieldset { border-width: 0px; font-family: Verdana,Helvetica,Arial,sans-serif; font-size: 1.1em; }
+input { font-weight: normal; vertical-align: middle; padding: 0px 3px; font-size: 1em; font-family: Verdana,Helvetica,Arial,sans-serif; }
+select { font-family: Verdana,Helvetica,Arial,sans-serif; font-weight: normal; cursor: pointer; vertical-align: middle; border: 1px solid transparent; padding: 1px; font-size: 1em; }
+select:focus { outline-style: none; }
+option { padding-right: 1em; }
+label { cursor: default; padding-right: 5px; }
+button::-moz-focus-inner { padding: 0px; border: 0px none; }
+fieldset.display-options { text-align: center; margin: 3px 0px 5px; }
+fieldset.display-options label { white-space: nowrap; padding-right: 2px; }
+.dropdown fieldset.display-options { font-size: 1em; margin: 0px; padding: 0px; }
+.dropdown fieldset.display-options label { display: block; margin: 4px; padding: 0px; text-align: right; white-space: nowrap; }
+.dropdown fieldset.display-options select { min-width: 120px; }
+.inputbox { border: 1px solid transparent; padding: 2px; }
+.inputbox:hover, .inputbox:focus { border: 1px solid transparent; outline-style: none; }
+input.inputbox { width: 85%; }
+input.tiny { width: 150px; }
+input[type="search"] { box-sizing: content-box; }
+input.button1, input.button2 { font-size: 1em; }
+a.button1, input.button1, input.button3, a.button2, input.button2 { width: auto ! important; padding-top: 1px; padding-bottom: 1px; font-family: "Lucida Grande",Verdana,Helvetica,Arial,sans-serif; background: transparent none repeat-x scroll left top; line-height: 1.5; }
+input[type="button"], input[type="submit"], input[type="reset"], input[type="checkbox"], input[type="radio"] { cursor: pointer; }
+a.button2, input.button2, input.button3 { border: 1px solid transparent; }
+a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, input.button3:hover { border: 1px solid transparent; }
+input.button1:focus, input.button2:focus, input.button3:focus { outline-style: none; }
+.search-box { float: left; }
+.search-box .inputbox { background-image: none; border-right-width: 0px; border-radius: 4px 0px 0px 4px; float: left; height: 24px; padding: 3px; box-sizing: border-box; }
+.search-header { border-radius: 4px; display: block; float: right; margin-right: 5px; margin-top: 30px; }
+.search-header .inputbox { border: 0px none; }
+.navbar .linklist > li.responsive-search { display: none; }
+input.search { background-image: none; background-repeat: no-repeat; background-position: left 1px; padding-left: 17px; }
+.tiny { width: 10%; }

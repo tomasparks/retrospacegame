@@ -1,0 +1,8 @@
+Each Sprite is allowed 15 Colors, 16 if transparency is not being used.
+
+Expections
+1. Animated Sprites will be counted as a sperate image each.
+
+2. Images with multible functions such and GUI and the Chests that some mobs carry will be treated as a spreate image, this also applys to saddles and will have there own color count.
+
+3. The Lever is the only upscaled to a 32 by 32 pixel image so it would texture correctly.

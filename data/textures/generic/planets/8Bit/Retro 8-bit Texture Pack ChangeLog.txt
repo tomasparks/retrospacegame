@@ -1,0 +1,51 @@
+Retro 8-bit Changelog
+
+2013
+
+7-14-13 First version of retro 8-bit texture pack launched for 1.5.2 it is only 3 days of work.
+
+8-9-13 A 3D anygraph version of Retro texture pack Ultimate also known as 1.6.2
+
+8-30-13 Retro Texture pack 1.5.2 ported to 1.6.2
+
+12-27-13 My Fist Texture Pack now with a Updated Version
+
+2014
+
+1-10-14 8-bit Retro Texture Pack 1.8 beta update
+
+1-16-14 8-bit Retro Texture Pack 1.8 beta 2 update
+
+2-5-14 8-bit Retro Texture Pack 1.8 Beta 3 Cloud Update
+
+2-18-14 8-bit Retro Texture Pack 1.8 Beta 4 Gui,Lever,Fish update
+
+3-10-14 update with all 1.8 textures and new paintings
+
+3-12-14 up to date with all 1.8 textures and wool/clay color correction, brick item and slight quartz textrue change.
+
+3-14-14 1.8 beta 5.0 Endermite!
+
+3-21-14 1.8 beta 5.1 New Grass,Sands,Snow, and podzel
+
+4-11-14 1.8 beta 6 New Item outline Update
+
+4-28-14 1.8 beta 7 All things for 14w17a. Splash bottle given black outline, New title screen and menu background, Minecraft Realms logo in 8-bit.
+
+4-30-14 1.8 beta 7.1 Horse Legs now drawn in.
+
+6-19-14 1.8 beta 7.2 All things for 14w25a. All things from snapshot.
+
+7-3-14 1.8 beta 7.3 All things for 14w27b. All things from snapshot.
+
+7-30-14 All things for 14w31. Banners and New wheat stage 7 growth color it is now yellow, it was green before.
+
+8-14-14 All things for 14w33a
+
+2015
+
+7-15-15 Particles looking slightly glitchy have been corrected
+
+7-15-15 Command block minecart in 8-bit has been done.
+
+2-25-16 Edited the Gui to green, turned any missing 8-bit things relating to Gui 8-bit. Also the folder name has been changed since 1.9 is about to come out.

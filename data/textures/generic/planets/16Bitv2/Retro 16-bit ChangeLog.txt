@@ -1,0 +1,29 @@
+Retro 16-bit Change Log
+
+2015
+
+3-30-15 First posting only a few things have been textured. 
+
+4-5-15 Almost all of the blocks are done, A good chunck of mobs are done as well. Enjoy. 
+
+4-10-15 All the "blocks" are done, here is a list of everything going at the momment.  
+
+4-29-15 All the mobs are done expect for the horse folder. I'll get back to it later. 
+
+4-29-15 12:06 PM central time, Just noticed TNT was never turned 16-bit it has now been fixed. 
+
+5-25-15 I would be updating this soon but due to data loss, All of the new work i was doing has been erased sorry for the invoncience. This pack will still be recviving updates in the future. 
+
+6-15-15 Finally update time not exactly the way i wanted it to be but hey GUI is done. :) I would have inculded items and GUI but I lost the items when i had to reinstall my laptop. 
+
+6-26-15 Finally done with horses, Im really happy the pack is almost done. Screenshots coming soon :) 
+
+7-5-15 Everything is done but the items :D 
+
+7-15-15 Items almost done updating to avoid data loss again. Enjoy :) 
+
+7-22-15 Everything is done! :D 
+
+8-8-15 Furnace, Dropper and Dispenser has had its shading improved.
+
+2-25-16 Updated the Mojang Logo to be 16-bit, also the folders name has been changed since 1.9 is just about to come out.

@@ -1,0 +1,13 @@
+/* Effective stylesheet produced by snapshot save */
+html { font-size: 1em; line-height: 1.5; }
+body { font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); }
+input, button, select, textarea { font-family: inherit; font-size: inherit; line-height: inherit; }
+img { vertical-align: middle; }
+hr { margin-top: 20px; margin-bottom: 20px; border-width: 1px 0px 0px; border-style: solid none none; border-color: rgb(229, 229, 229) currentcolor currentcolor; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; }
+a { color: rgb(66, 139, 202); text-decoration: none; }
+a:hover, a:focus, a:active { color: rgb(42, 100, 150); text-decoration: underline; }
+blockquote, dl, dd, h1, h2, h3, h4, h5, h6, figure, p, pre { margin: 0px; }
+button { background: transparent none repeat scroll 0% 0%; border: 0px none; padding: 0px; }
+button:focus { outline: 1px dotted; }
+fieldset { border: 0px none; margin: 0px; padding: 0px; }
+ol, ul { list-style: outside none none; margin: 0px; padding: 0px; }
